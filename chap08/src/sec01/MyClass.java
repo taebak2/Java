@@ -1,24 +1,24 @@
 package sec01;
 
 public class MyClass {
-	// ÇÊµå
+	// í•„ë“œ
 	RemoteControl rc = new Television();
 
-	// µğÆúÆ® »ı¼ºÀÚ
-	// µğÆúÆ® »ı¼ºÀÚ È£Ãâ½Ã Television¿¡¼­ ±¸ÇöµÈ ¸Ş¼Òµå È£Ãâ
+	// ë””í´íŠ¸ ìƒì„±ì
+	// ë””í´íŠ¸ ìƒì„±ì í˜¸ì¶œì‹œ Televisionì—ì„œ êµ¬í˜„ëœ ë©”ì†Œë“œ í˜¸ì¶œ
 	MyClass() {
 	}
 
-	// ÀÎÅÍÆäÀÌ½º¸¦ ¸Å°³º¯¼ö·Î ÇÏ´Â »ı¼ºÀÚ
+	// ì¸í„°í˜ì´ìŠ¤ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ í•˜ëŠ” ìƒì„±ì
 	MyClass(RemoteControl rc) {
 		this.rc = rc;
-		rc.turnOn(); // Television¿¡¼­ ±¸ÇöµÈ turnOn È£Ãâ
-		rc.turnOff(); // Television¿¡¼­ ±¸ÇöµÈ turnOn È£Ãâ
-		rc.setVolume(5); // Television¿¡¼­ ±¸ÇöµÈ setVolume È£Ãâ
-		rc.turnOff(); // Television¿¡¼­ ±¸ÇöµÈ turnOff È£Ãâ
+		rc.turnOn(); // Televisionì—ì„œ êµ¬í˜„ëœ turnOn í˜¸ì¶œ
+		rc.turnOff(); // Televisionì—ì„œ êµ¬í˜„ëœ turnOff í˜¸ì¶œ
+		rc.setVolume(5); // Televisionì—ì„œ êµ¬í˜„ëœ setVolume í˜¸ì¶œ
+		rc.turnOff(); // Televisionì—ì„œ êµ¬í˜„ëœ turnOff í˜¸ì¶œ
 	}
 
-	// Audio °´Ã¼ÀÇ ¸Ş¼Òµå È£Ãâ
+	// Audio ê°ì²´ì˜ ë©”ì†Œë“œ í˜¸ì¶œ
 	void methodA() {
 		RemoteControl rc = new Audio();
 		rc.turnOff();
@@ -26,7 +26,7 @@ public class MyClass {
 		rc.turnOn();
 	}
 
-	// ¸Å°³º¯¼ö °´Ã¼ÀÇ ¸Ş¼Òµå È£Ãâ
+	// ë§¤ê°œë³€ìˆ˜ ê°ì²´ì˜ ë©”ì†Œë“œ í˜¸ì¶œ
 	void methodB(RemoteControl rc) {
 		rc.turnOn();
 		rc.setVolume(5);
