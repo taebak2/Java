@@ -1,9 +1,9 @@
 package sec01;
-//±¸Çö Å¬·¡½º
+//Â±Â¸Ã‡Ã¶ Ã…Â¬Â·Â¡Â½Âº
 public class Cat implements Soundable{
 
 	public String sound() {
-		return "¾ß¿Ë";
+		return "ì•¼ì˜¹";
 	}
 
 
