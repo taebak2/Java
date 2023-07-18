@@ -1,7 +1,7 @@
 package sec02;
 
 public class DaoExample {
-	public static void dbWork(DataAccessObject dao) { // DataaAccessObject interface¿¡ Á¢±Ù dao¶ó°í ¸í¸í
+	public static void dbWork(DataAccessObject dao) { // DataaAccessObject interfaceì— ì ‘ê·¼ daoë¼ê³  ëª…ëª…
 		dao.select();
 		dao.insert();
 		dao.update();
