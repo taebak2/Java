@@ -4,7 +4,7 @@ public class Car2 {
 
 	public static void main(String[] args) {
 		Car car = new Car();
-		Car.OldCar oldcar = car.new OldCar(); // CarÅ¬·¡½º ¿ÜºÎÁ¢±Ù
+		Car.OldCar oldcar = car.new OldCar(); // Carí´ë˜ìŠ¤ ì™¸ë¶€ ì ‘ê·¼
 		oldcar.speedUp(50);
 		System.out.println(oldcar.speed);
 	}
