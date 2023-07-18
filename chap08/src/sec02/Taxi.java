@@ -4,7 +4,7 @@ import sec02.exam01.Vehicle;
 
 public class Taxi implements Vehicle {
 	public void run() {
-		System.out.println("ÅÃ½Ã°¡ ´Ş¸³´Ï´Ù.");
+		System.out.println("íƒì‹œê°€ ë‹¬ë¦½ë‹ˆë‹¤.");
 
 	}
 }
