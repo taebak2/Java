@@ -6,7 +6,7 @@ public class StudentAExmaple {
 
 		// StudentB 객체 생성하세요
 		StudentA a = new StudentA(); // static이 없기 때문에 초기 선언 필요
-		StudentA.StudentB b = a.new StudentB();
+		StudentA.StudentB b = a.new StudentB(); // StudentB 클래스는 StudentA클래스 안에 있는 중첩 클래스 .은 경로를 나타냄
 		// 방법 2 : StudentA.StudentB b= new StudentA().new StudentB(); // A.B b = new
 		// A.new B
 

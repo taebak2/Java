@@ -4,7 +4,7 @@ public class Car2 {
 	// 필드값으로 익명 객체를 대입
 	// car 메소드 오버라이드 하고
 	// speedUp(int speed) 메소드 만들기
-	Car car = new Car() {
+	Car car = new Car() { // 중괄호 = 익명 객체 
 		int speed;
 
 		@Override
@@ -26,18 +26,17 @@ public class Car2 {
 	void speedDown() {
 		Car downCar = new Car() {
 
-			void speedDown() {
+			void speedDown2() {
 				System.out.println("속도가 감소했습니다.");
 			}
 
 			@Override
 			void stop() {
-				speedDown();
+				speedDown2();
 			}
 
-		};
+		}; downCar.stop();
 		// speedDown() 메소드를 호출하면 익명 개체안의
 		// 메소드(void speedDown, stop)가 자동으로 실행되지 않기 때문에(?) downCar.stop을 호출해줘야한다.
-		downCar.stop();
 	}
 }

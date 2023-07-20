@@ -7,6 +7,6 @@ public class Car {
 	String color;
 
 	void stop() {
-		System.out.println("ì°¨ê°€ ë©ˆì¶¥ë‹ˆë‹¤.");
+		System.out.println("Â÷°¡ ¸ØÃä´Ï´Ù.");
 	}
 }
