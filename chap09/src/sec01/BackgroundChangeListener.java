@@ -1,10 +1,10 @@
 package sec01;
 
-public class BackgroundChangeListener implements CheckBox.OnSelectListener {
+public class BackgroundChangeListener implements CheckBox.OnSelectListener { // CheckBox °æ·Î ¾ÈÀÇ OnSelectListener¸¦ ±¸ÇöÇÏ´Â °´Ã¼ : BackgroundChangeListetner
 
 	@Override
 	public void onSelect() {
-		System.out.println("ë°°ê²½ì„ ë³€ê²½í•©ë‹ˆë‹¤.");
+		System.out.println("¹è°æÀ» º¯°æÇÕ´Ï´Ù."); // interface°¡ staticÀÌ¶ó ¹Ù·Î Á¢±Ù °¡´É.. 
 	}
 
 }
