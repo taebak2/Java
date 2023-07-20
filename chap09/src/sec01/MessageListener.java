@@ -4,7 +4,7 @@ public class MessageListener implements Button.OnClickListener{
 
 	@Override
 	public void onClick() {
-		System.out.println("¹è°æÀ» º¯°æÇÕ´Ï´Ù.");
+		System.out.println("ë°°ê²½ì„ ë³€ê²½í•©ë‹ˆë‹¤.");
 	} 
 					
 
