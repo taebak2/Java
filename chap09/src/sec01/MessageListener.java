@@ -1,11 +1,14 @@
 package sec01;
 
-public class MessageListener implements Button.OnClickListener{ // OnClickListenerê°€ Button classì•ˆì— ìˆê¸° ë•Œë¬¸ì—
-					
+public class MessageListener implements Button.OnClickListener{
+
 	@Override
 	public void onClick() {
-		System.out.println("ë©”ì„¸ì§€ë¥¼ ë³´ëƒ…ë‹ˆë‹¤");
+		System.out.println("¹è°æÀ» º¯°æÇÕ´Ï´Ù.");
+	} 
+					
+
 		
 	}
 
-}
+

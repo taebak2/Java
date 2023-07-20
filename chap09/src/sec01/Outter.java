@@ -15,8 +15,8 @@ public class Outter {
 		}
 
 		void print() {
-			System.out.println(this.name);
-			System.out.println(Outter.this.name);
+			System.out.println(this.name); // Nested 필드에 접근 
+			System.out.println(Outter.this.name); // Outter의 필드에 접근
 		}
 	}
 

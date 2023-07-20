@@ -1,6 +1,6 @@
 package sec01;
 
-public class CallListener implements Button.OnClickListener{ // OnClickListener가 Button class안에 있기 때문에
+public class CallListener implements Button.OnClickListener{ // OnClickListener가 Button class안에 있기 때문에 Button.
 					
 	@Override
 	public void onClick() {

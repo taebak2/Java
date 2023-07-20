@@ -7,6 +7,9 @@ public class ButtonExmaple {
 		
 		btn.setOnClickListener(new CallListener()); // CallListener∞¥√º∞° Listener≈∏¿‘¿∏∑Œ πŸ≤Ò
 		btn.touch();
+		
+		btn.setOnClickListener(new MessageListener());
+		btn.touch();
 	}
 
 }
