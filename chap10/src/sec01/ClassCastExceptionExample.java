@@ -9,7 +9,7 @@ public class ClassCastExceptionExample {
 		changeDog(dog);
 
 		Animal animal2 = new Dog();
-		Cat cat = (Cat) animal2; // java.lang.ClassCastException ¿À·ù Cat°´Ã¼¸¦ ¸Å°³°ªÀ¸·Î Áà¼­ Dog Å¸ÀÔÀ¸·Î º¯È¯ X
+		Cat cat = (Cat) animal2; // java.lang.ClassCastException ì˜¤ë¥˜ (Catê°ì²´ë¥¼ ë§¤ê°œê°’ìœ¼ë¡œ ì¤˜ì„œ Dog íƒ€ì…ìœ¼ë¡œ ë³€í™˜ X)
 		changeDog(cat);
 	}
 
