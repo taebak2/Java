@@ -2,16 +2,16 @@ package sec01;
 
 public class ArrayIndexOutOfBoundsException {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 
 		String[] a = new String[10];
 
-		a[0] = "°¡³ª´Ù";
+		a[0] = "ê°€ë‚˜ë‹¤";
 		String data1 = a[0];
 		System.out.println("a[0]:" + data1);
 
-		String data2 = args[0]; // args¶ó´Â ¹è¿­À» »ı¼ºÇÏÁö ¾Ê°í ¹è¿­¿¡ ÀÖ´Â °ªÀ» ´ëÀÔÇÔ
-		String data3 = args[1]; // ÀÌ´ë·Î Ãâ·ÂÇÏ¸é ArrayIndexException ¹ß»ı(¹è¿­¿¡¼­ ÀÎµ¦½º ¹üÀ§ ÃÊ°úÇÑ ¿À·ù)
+		String data2 = args[0]; // argsë¼ëŠ” ë°°ì—´ì„ ìƒì„±í•˜ì§€ ì•Šê³  ë°°ì—´ì— ìˆëŠ” ê°’ì„ ëŒ€ì…í•¨
+		String data3 = args[1]; // ì´ëŒ€ë¡œ ì¶œë ¥í•˜ë©´ ArrayIndexException ë°œìƒ(ë°°ì—´ì—ì„œ ì¸ë±ìŠ¤ ë²”ìœ„ ì´ˆê³¼í•œ ì˜¤ë¥˜)
 		String data4 = args[2];
 		System.out.println(data2);
 		System.out.println(data3);
