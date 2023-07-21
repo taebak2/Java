@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class NullPointerExceptionExample {
 
 	public static void main(String[] args) {
-		String data = "µ¥ÀÌÅÍº£ÀÌ½º";
+		String data = "ë°ì´í„°ë² ì´ìŠ¤";
 		int num = 5;
-		System.out.println(data.toString()); // toString : °´Ã¼°¡ °¡Áö°í ÀÖ´Â Á¤º¸, °ªµéÀ» StringÀ¸·Î ¸®ÅÏ String.valueOf¿Í À¯»ç
+		System.out.println(data.toString()); // toString : ê°ì²´ê°€ ê°€ì§€ê³  ìˆëŠ” ì •ë³´, ê°’ë“¤ì„ Stringìœ¼ë¡œ ë¦¬í„´ String.valueOfì™€ ìœ ì‚¬
 		System.out.println(data.charAt(1));
-		// System.out.println(num.toString()); // num °ªÀÌ int¶ó¼­ ¿¡·¯(ÀÏ¹İ ¿¹¿Ü)
+		// System.out.println(num.toString()); // num ê°’ì´ intë¼ì„œ ì—ëŸ¬(ì¼ë°˜ ì˜ˆì™¸)
 		
 		//String data1 = null;
-		//System.out.println(data1.toString());//(½ÇÇà ¿¹¿Ü: NullPointerException = º¯¼ö°¡ nullÀÌ¶ó¼­ ¹ß»ıÇÏ´Â ¿À·ù)
-											 // String.valueOf vs toString = Null °ª¿¡ ´ëÇÑ °á°ú°¡ ´Ù¸§,
+		//System.out.println(data1.toString());//(ì‹¤í–‰ ì˜ˆì™¸: NullPointerException = ë³€ìˆ˜ê°€ nullì´ë¼ì„œ ë°œìƒí•˜ëŠ” ì˜¤ë¥˜)
+											 // String.valueOf vs toString = Null ê°’ì— ëŒ€í•œ ê²°ê³¼ê°€ ë‹¤ë¦„, ??
 		
 		
 		
