@@ -7,11 +7,11 @@ public class ThrowsExample {
 		try {
 			findClass();
 		} catch (ClassNotFoundException e) {
-			System.out.println("Å¬·¡½º°¡ Á¸ÀçÇÏÁö ¾Ê¾Æ¿ä.");
+			System.out.println("í´ë˜ìŠ¤ê°€ ì¡´ì¬í•˜ì§€ ì•Šì•„ìš”.");
 		}
 
 	}
-	public static void findClass() throws ClassNotFoundException{ // throws°¡ Æ÷ÇÔµÈ Å¬·¡½º´Â ¹İµå½Ã try¿¡¼­ ÀÔ·ÂÇØÁà¾ßÇÑ´Ù.
-		Class clazz = Class.forName("java.util.Scanner"); // java.util.Scanner ÀÖ³ª Ã£¾Æº¸¼¼¿ä
+	public static void findClass() throws ClassNotFoundException{ // throwsê°€ í¬í•¨ëœ í´ë˜ìŠ¤ëŠ” ë°˜ë“œì‹œ tryì—ì„œ ì…ë ¥í•´ì¤˜ì•¼í•¨
+		Class clazz = Class.forName("java.util.Scanner"); // java.util.Scanner ì°¾ê¸° 
 	}
 }
