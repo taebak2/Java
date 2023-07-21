@@ -3,12 +3,12 @@ package sec02;
 public class TryCatchFinallyExample {
 
 	public static void main(String[] args) {
-		try { // try = ¿¹¿Ü ¾øÀÌ Á¤»ó ½ÇÇàµÇ¸é catch ºí·Ï ÄÚµå ½ÇÇà X, ¿¹¿Ü ¹ß»ıÇÏ¸é ½ÇÇà ¸ØÃã
-			Class clazz = Class.forName("java.lang.String"); // ÀÚ¹Ù ·©¿¡ ½ºÆ®¸µÀÌ ÀÖ³ª¿ä?
-		} catch (ClassNotFoundException e) { // ¿¹¿ÜÃ³¸® 
-			System.out.println("Å¬·¡½º°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
-		} finally {// finally = ¹«Á¶°Ç ½ÇÇà
-			System.out.println("Á¤»ó Ã³¸® µÇ¾ú½À´Ï´Ù."); 
+		try { // try = ì˜ˆì™¸ ì—†ì´ ì •ìƒ ì‹¤í–‰ë˜ë©´ catch ë¸”ë¡ ì½”ë“œ ì‹¤í–‰ X, ì˜ˆì™¸ ë°œìƒí•˜ë©´ ì‹¤í–‰ ë©ˆì¶¤
+			Class clazz = Class.forName("java.lang.String"); // java.lang.String ì°¾ê¸°
+		} catch (ClassNotFoundException e) { // ì˜ˆì™¸ì²˜ë¦¬ 
+			System.out.println("í´ë˜ìŠ¤ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
+		} finally {// finally = ë¬´ì¡°ê±´ ì‹¤í–‰
+			System.out.println("ì •ìƒ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤."); 
 		}
 
 	}
