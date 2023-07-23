@@ -4,7 +4,7 @@ public class ThrowsExample {
 
 	public static void main(String[] args) {
 		
-		try {
+		try {				// try = if, catch = else if 개념이라고 생각하면 쉬움
 			findClass();
 		} catch (ClassNotFoundException e) {
 			System.out.println("클래스가 존재하지 않아요.");
