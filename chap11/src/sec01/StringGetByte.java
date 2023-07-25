@@ -6,11 +6,11 @@ public class StringGetByte {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
-		String str = "¾È³çÇÏ¼¼¿ä";
+		String str = "ì•ˆë…•í•˜ì„¸ìš”";
 		byte[] byte1 = str.getBytes(); 
-		System.out.println(byte1.length); // ÇÑ±ÛÀº 2¹ÙÀÌÆ®¾¿ Â÷Áö.. ±×·¡¼­ ÃÑ 10°³ 
+		System.out.println(byte1.length); // í•œê¸€ì€ 2ë°”ì´íŠ¸ì”© ì°¨ì§€.. ê·¸ë˜ì„œ ì´ 10ê°œ 
 
-		byte[] byte2 = str.getBytes("UTF-8"); 
+		byte[] byte2 = str.getBytes("UTF-8"); // 15
 		System.out.println(byte2.length);
 
 	}
