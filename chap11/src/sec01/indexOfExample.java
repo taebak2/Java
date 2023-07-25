@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class indexOfExample {
 
 	public static void main(String[] args) {
-		// String str1 = "³ª´Â ÀÚ¹Ù¸¦ »ç¶ûÇÕ´Ï´Ù.";
-		// int index = str1.indexOf("ÄÚµå"); // indexOf ½ÃÀÛÀ§Ä¡, ¸¸¾à ÇØ´ç ¹®ÀÚ¿­ÀÌ Æ÷ÇÔµÇÁö ¾ÊÀ¸¸é
-		// -1(=false) Ãâ·Â
+		// String str1 = "ë‚˜ëŠ” ìë°”ë¥¼ ì‚¬ë‘í•©ë‹ˆë‹¤.";
+		// int index = str1.indexOf("ì½”ë“œ"); // indexOf ì‹œì‘ìœ„ì¹˜, ë§Œì•½ í•´ë‹¹ ë¬¸ìì—´ì´ í¬í•¨ë˜ì§€ ì•Šìœ¼ë©´
+		// -1(=false) ì¶œë ¥
 		// System.out.println(index);
 
 		Scanner s = new Scanner(System.in);
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		String address = s.next();
-		if (address.indexOf("ÁßÈï") != -1 || address.indexOf("µÎ¾Ï") != -1 || address.indexOf("¿î¾Ï") != -1
-				|| address.indexOf("¿ëºÀ") != -1) {
-			System.out.println("ºÏ±¸ °ÅÁÖ¹ÎÀÔ´Ï´Ù.");
+		if (address.indexOf("ì¤‘í¥") != -1 || address.indexOf("ë‘ì•”") != -1 || address.indexOf("ìš´ì•”") != -1
+				|| address.indexOf("ìš©ë´‰") != -1) { 
+			System.out.println("ë¶êµ¬ ê±°ì£¼ë¯¼ì…ë‹ˆë‹¤.");
 		} else {
-			System.out.println("ºÏ±¸ °ÅÁÖ¹ÎÀÌ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ë¶êµ¬ ê±°ì£¼ë¯¼ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		}
 	}
 
