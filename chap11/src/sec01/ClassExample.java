@@ -2,19 +2,19 @@ package sec01;
 
 public class ClassExample {
 
-	public static void main(String[] args) throws Exception{
-		//Ã¹ ¹øÂ° ¹æ¹ı
+	public static void main(String[] args) throws Exception{ // ì˜ˆì™¸ ì²˜ë¦¬ 
+		//ì²« ë²ˆì§¸ ë°©ë²•
 		//Class clazz = Key.class;
-		//Class clazz1 = Class.forName("sec01.Key");
+		//Class clazz1 = Class.forName("sec01.Key"); // class.forNameì„ ì‚¬ìš©í•˜ëŠ” ì´ìœ  : ëŸ°íƒ€ì„ì— ë™ì ìœ¼ë¡œ í´ë˜ìŠ¤ë¥¼ ë¡œë“œí•˜ê¸°ìœ„í•¨
 		
 		Key key = new Key(50);
 		Class clazz = key.getClass();
-		System.out.println(clazz.getName()); // getName : ÆĞÅ°Áö + Å¬·¡½º
-											 // ÆÄÀÏ °æ·Î È®ÀÎÇÒ ¶§ ÁÖ·Î »ç¿ë 
+		System.out.println(clazz.getName()); // getName : íŒ¨í‚¤ì§€ + í´ë˜ìŠ¤  // íŒŒì¼ ê²½ë¡œ í™•ì¸í•  ë•Œ ì£¼ë¡œ ì‚¬ìš© 
+											
 		
 		
 		Class clazz2 = Member.class;
-		System.out.println(clazz2.getSimpleName()); // getSimpleName : Å¬·¡½º ÀÌ¸§¸¸ ³ª¿È
+		System.out.println(clazz2.getSimpleName()); // getSimpleName : í´ë˜ìŠ¤ ì´ë¦„ë§Œ ë‚˜ì˜´
 		
 	}
 
