@@ -6,31 +6,31 @@ public class StringCharAtExample {
 
 	public static void main(String[] args) {
 
-		// 2¸íÀÇ ÀÌ¸§°ú Ã³¸®ÄÚµå¸¦ ÀÔ·Â ¹ŞÀ¸¼¼¿ä
-		// ¿¹) È«±æµ¿ C88, Àåµ¿°Ç B70
-		// ¸Ç ¾Õ ¹®ÀÚ´Â µî±Ş, ³ª¸ÓÁö 2±ÛÀÚ´Â Á¡¼öÀÔ´Ï´Ù.
-		// µî±ŞÀº A~Dµî±Ş±îÁö Á¸ÀçÇÏ°í
-		// Aµî±ŞÀº Á¡¼ö¿¡ 20% °¡»ê, Bµî±ŞÀº Á¡¼ö¿¡ 10% °¡»ê
-		// Cµî±ŞÀº Á¡¼ö¿¡ 5% °¡»êÀÔ´Ï´Ù.
+		// 2ëª…ì˜ ì´ë¦„ê³¼ ì²˜ë¦¬ì½”ë“œë¥¼ ì…ë ¥ ë°›ìœ¼ì„¸ìš”
+		// ì˜ˆ) í™ê¸¸ë™ C88, ì¥ë™ê±´ B70
+		// ë§¨ ì• ë¬¸ìëŠ” ë“±ê¸‰, ë‚˜ë¨¸ì§€ 2ê¸€ìëŠ” ì ìˆ˜ì…ë‹ˆë‹¤.
+		// ë“±ê¸‰ì€ A~Dë“±ê¸‰ê¹Œì§€ ì¡´ì¬í•˜ê³ 
+		// Aë“±ê¸‰ì€ ì ìˆ˜ì— 20% ê°€ì‚°, Bë“±ê¸‰ì€ ì ìˆ˜ì— 10% ê°€ì‚°
+		// Cë“±ê¸‰ì€ ì ìˆ˜ì— 5% ê°€ì‚°ì…ë‹ˆë‹¤.
 
-		// ÃÖÁ¾Á¡¼ö°¡ 90Á¡ ÀÌ»óÀÌ¸é "ÃÖ¿ì¼ö", 80ÀÌ»óÀÌ¸é "¿ì¼ö"
-		// ³ª¸ÓÁö´Â "ÀÏ¹İ"ÀÔ´Ï´Ù.
-		// ÃÖÁ¾ Ãâ·Â -> È«±æµ¿´ÔÀº ÃÖ¿ì¼ö µî±ŞÀÔ´Ï´Ù.
+		// ìµœì¢…ì ìˆ˜ê°€ 90ì  ì´ìƒì´ë©´ "ìµœìš°ìˆ˜", 80ì´ìƒì´ë©´ "ìš°ìˆ˜"
+		// ë‚˜ë¨¸ì§€ëŠ” "ì¼ë°˜"ì…ë‹ˆë‹¤.
+		// ìµœì¢… ì¶œë ¥ -> í™ê¸¸ë™ë‹˜ì€ ìµœìš°ìˆ˜ ë“±ê¸‰ì…ë‹ˆë‹¤.
 
 		Scanner s = new Scanner(System.in);
 		String name[] = new String[2];
 		String score[] = new String[2];
 		double result;
 		
-		System.out.println("2¸íÀÇ ÀÌ¸§°ú Ã³¸®ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("2ëª…ì˜ ì´ë¦„ê³¼ ì²˜ë¦¬ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		
 		
 		for (int i = 0; i < 2; i++) {
-			result = Integer.parseInt(score[i].substring(1));
+			result = Integer.parseInt(score[i].substring(1)); // score ìˆ«ìë¥¼ intë¡œ ë³€í™˜
 			name[i] = s.next();
-			score[i] = s.next(); // Á¡¼ö ½ºÄÚ¾î·Î È¯»ê
+			score[i] = s.next(); // ì ìˆ˜ ìŠ¤ì½”ì–´ë¡œ í™˜ì‚°
 			Integer.parseInt(score[i].substring(1));
-			switch (score[i].charAt(0)) {
+			switch (score[i].charAt(0)) { // ì•ŒíŒŒë²³ ì ìˆ˜ í™˜ì‚° 
 			case 'A':
 			case 'a':
 				result*=1.2;
@@ -44,15 +44,15 @@ public class StringCharAtExample {
 				result*=1.05;
 				break;
 			}
-			System.out.println(name[i] + "´ÔÀº ");
+			System.out.println(name[i] + "ë‹˜ì€ ");
 
 			System.out.println(result);
 			if (result >= 90) {
-				System.out.println("ÃÖ¿ì¼ö µî±ŞÀÔ´Ï´Ù.");
+				System.out.println("ìµœìš°ìˆ˜ ë“±ê¸‰ì…ë‹ˆë‹¤.");
 			} else if (result >= 80) {
-				System.out.println("¿ì¼ö µî±ŞÀÔ´Ï´Ù.");
+				System.out.println("ìš°ìˆ˜ ë“±ê¸‰ì…ë‹ˆë‹¤.");
 			} else {
-				System.out.println("ÀÏ¹İ µî±ŞÀÔ´Ï´Ù.");
+				System.out.println("ì¼ë°˜ ë“±ê¸‰ì…ë‹ˆë‹¤.");
 			}
 		}
 
