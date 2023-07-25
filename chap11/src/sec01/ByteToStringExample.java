@@ -5,10 +5,10 @@ public class ByteToStringExample {
 	public static void main(String[] args) {
 		byte[] bytes = { 71, 111, 111, 100, 32, 109, 111, 114, 110, 105, 110, 103 };
 
-		String str1 = new String(bytes);
-		System.out.println(str1);
+		String str1 = new String(bytes); 
+		System.out.println(str1); // ì•„ìŠ¤í‚¤ì½”ë“œ ì¶œë ¥ 
 
-		String str2 = new String(bytes, 5, 7); // (bytes, 5, 7) ¹ÙÀÌÆ® Å¸ÀÔ, 0¹øºÎÅÍ.. [5]¹øÁ¦¿ÜÇÏ°í 7°³
+		String str2 = new String(bytes, 5, 7); // (bytes, 5, 7) ë°”ì´íŠ¸ íƒ€ì…, 0ë²ˆë¶€í„°.. [5]ë²ˆì œì™¸í•˜ê³  7ê°œ
 		System.out.println(str2);
 	}
 
