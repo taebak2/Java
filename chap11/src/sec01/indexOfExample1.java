@@ -7,11 +7,11 @@ public class indexOfExample1 {
 	public static void main(String[] args) {
 
 		Scanner s = new Scanner(System.in);
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		String ad = s.nextLine();
-		ad = ad.replace("±¤ÁÖ", "±¤ÁÖ±¤¿ª½Ã");
+		System.out.println("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+		String ad = s.nextLine(); // ë„ì–´ì“°ê¸° í¬í•¨
+		ad = ad.replace("ê´‘ì£¼", "ê´‘ì£¼ê´‘ì—­ì‹œ");
 		System.out.println(ad);
-		ad = ad.replaceFirst("ºÏ±¸", "µÎ¾Ïµ¿"); // Áßº¹½Ã Ã¹ ¹øÂ° ¹®ÀÚ¸¸ º¯°æ
+		ad = ad.replaceFirst("ë¶êµ¬", "ë‘ì•”ë™"); // replaceFirstì¤‘ë³µì‹œ ì²« ë²ˆì§¸ ë¬¸ìë§Œ ë³€ê²½
 		System.out.println(ad);
 	}
 
