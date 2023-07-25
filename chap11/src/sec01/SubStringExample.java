@@ -6,12 +6,12 @@ public class SubStringExample {
 		String ssn = "031225-3548812";
 
 		String firstNum = ssn.substring(7, 8);
-		// 3ÀÌ ´ëÀÔµÊ
+		// 3ì´ ëŒ€ì…ë¨
 
 		if (firstNum.equals("1") || firstNum.equals("3")) {
-			System.out.println("³²ÀÚ");
+			System.out.println("ë‚¨ì");
 		} else {
-			System.out.println("¿©ÀÚ");
+			System.out.println("ì—¬ì");
 		}
 
 	}
