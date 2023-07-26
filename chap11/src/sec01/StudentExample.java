@@ -10,7 +10,7 @@ public class StudentExample {
 		hashMap.put(new Student("1"),"95");
 		
 		String score = hashMap.get(new Student("1"));
-		System.out.println("1¹ø ÇĞ»ıÀÇ ÃÑÁ¡: " + score);
+		System.out.println("1ë²ˆ í•™ìƒì˜ ì´ì  : " + score);
 
 	}
 
