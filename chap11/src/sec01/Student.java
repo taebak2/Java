@@ -17,7 +17,7 @@ public class Student {
 	}
 
 	@Override
-	public boolean equals(Object obj) { //equals, hasCode ¿À¹ö¶óÀÌµå... hashMap°úÀÇ °ü°è 
+	public boolean equals(Object obj) { //equals, hasCode ìš©ë„... hashMapê³¼ì˜ ê´€ê³„  
 		if (obj instanceof Student) {
 			Student student = (Student) obj;
 			if (studentNum.equals(student.getStudentNum())) {
