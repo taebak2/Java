@@ -4,12 +4,12 @@ public class SumExample {
 
 	public static void main(String[] args) {
 
-		// 1ºÎÅÍ 10±îÁö È¦¼ö¸¸ Ãâ·Â
+		
 		Sum sum = new Sum();
 		Thread thread = new Thread(sum);
 		thread.start();
 		for (int i = 0; i <= 10; i++) {
-			if (i % 2 == 1) {
+			if (i % 2 == 1) { // 1ë¶€í„° 10ê¹Œì§€ í™€ìˆ˜ë§Œ ì¶œë ¥
 				System.out.print(i);
 			}
 
@@ -19,7 +19,7 @@ public class SumExample {
 			}
 		}
 
-		// 1ºÎÅÍ 10±îÁö Â¦¼ö¸¸ Ãâ·Â
+		
 
 	}
 
