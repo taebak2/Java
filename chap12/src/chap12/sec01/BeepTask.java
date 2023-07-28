@@ -15,7 +15,7 @@ public class BeepTask implements Runnable {
 		}
 
 		for (int i = 0; i < 5; i++) {
-			System.out.println("¶ò");
+			System.out.println("ëµ");
 		}
 		try {
 			Thread.sleep(500);
