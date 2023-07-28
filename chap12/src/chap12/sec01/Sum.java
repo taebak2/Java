@@ -3,7 +3,7 @@ package chap12;
 public class Sum implements Runnable {
 
 	@Override
-	public void run() { // 1ºÎÅÍ 10±îÁö Â¦¼ö¸¸ Ãâ·Â
+	public void run() { // 1ë¶€í„° 10ê¹Œì§€ ì§ìˆ˜ ì¶œë ¥
 		for (int i = 1; i <= 10; i++) {
 			if (i % 2 == 0) {
 				System.out.print(i);
