@@ -10,7 +10,7 @@ public class BeepPrintExample4 {
 		thread.start(); // thread.start run? vs Runnable run? 
 
 		for (int i = 0; i < 5; i++) {
-			System.out.println("¶ò");
+			System.out.println("ëµ");
 			try {
 				Thread.sleep(500);
 			} catch (Exception e) {
