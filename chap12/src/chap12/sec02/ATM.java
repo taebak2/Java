@@ -7,19 +7,18 @@ public class ATM implements Runnable {
 	public void run() {
 		synchronized (this) { // this = Thread.mother
 			for (int i = 0; i < 10; i++) {
-				// objectÀÇ ¸Ş¼Òµå
+				// objectì˜ ë©”ì†Œë“œ
 
-				notify(); //  ¸Ç Ã³À½ÀÇ notify´Â ¾ö¸¶¸¸ ÀÖ±â ¶§¹®¿¡ ±ú¿ï »ç¶÷ÀÌ ¾ø´Ù?
+				notify(); // mother.start()ê°€ ë¨¼ì € ì‹¤í–‰ë˜ë©´ forë¬¸ì˜ i=0ì¼ë•Œ notifyëŠ” ì‹¤í–‰ë˜ì§€ ì•ŠëŠ”ë‹¤. ì ë“  ì‚¬ëŒì´ ì—†ê¸° ë•Œë¬¸ì— ê¹¨ìš¸ ì‚¬ëŒì´ ì—†ëŠ” ìƒíƒœì„ 
 				try {
 					 
-					wait(); // °®°í ÀÖ´ø °íÀ¯ ¶ôÀ» ÇØÁ¦ÇÏ°í ½º·¹µå¸¦ Àáµé°Ô ÇÔ Áï ¾ö¸¶°¡ Àáµç »óÅÂ.. 
-							 // ±×·¯¸é son.start()°¡ ½ÇÇàµÉ ¶§ ¾ÆµéÀÌ notify¸¦ ¸¸³ª¸é ¾ö¸¶°¡ ÀÏ¾î³ª¼­ Thread.sleep(1000)ºÎÅÍ ½ÇÇàÇÏ°Ô µË´Ï´Ù.
-							// ±×¿Í µ¿½Ã¿¡ ¾ÆµéÀº wait¸¦ ¸¸³ª¼­ ÀÚ°íÀÖ´Â »óÅÂ°¡ µÈ´Ù.
-							// ¾ö¸¶°¡ i=1ÀÏ´ë notify¸¦ ´Ù½Ã ¸¸³ª±â ¶§¹®¿¡ ±×¶§ ¾ÆµéÀÌ ÀÏ¾î³ª
-							// ¾ÆµéÀº ¶Ç thread.sleep(1000)ºÎÅÍ ½ÇÇà 
-							//for¹® i=1 ºÎÅÍ ¾ÆµéÀÌ ½ÇÇàµÇ¸é 
-							//ÇöÀç ¾ö¸¶°¡ Àá±ä »óÅÂ¿©µµ ½ÇÇàÀÌ °°ÀÌ µÇ¾ßÇÏÁö¾Ê´ÂÁö?? ¾ö¸¶°¡ Àá±ä »óÅÂ¿©µµ ½ÇÇàµÆ±â ¶§¹®.
-							//synchronhizedÀÇ ÃÊ±â »óÅÂ´Â Àá±è »óÅÂÀÎÁö? ±×·¯¸é lockÀÌ ÇÏ´Â ±â´ÉÀÌ Á¤È®È÷ ¹«¾ùÀÎÁö ¸ğ¸£°ÚÀ½..
+					wait(); // wait(); : ê°–ê³  ìˆë˜ ê³ ìœ  ë½ì„ í•´ì œí•˜ê³  ìŠ¤ë ˆë“œë¥¼ ì ë“¤ê²Œ í•¨ ì¦‰ motherê°€ ì ì´ ë“¤ê²Œëœë‹¤.  
+						//  son.start()ê°€ ì‹¤í–‰ë  ë•Œ sonì´ notifyë¥¼ ë§Œë‚˜ ì ë“  motherê°€ ì¼ì–´ë‚˜ mother.start();ëŠ” waitì´í›„ ëª…ë ¹ë¬¸ì¸ Thread.sleep(1000)ë¶€í„° ì‹¤í–‰í•˜ê²Œ ëœë‹¤.
+						// ê·¸ì™€ ë™ì‹œì— sonì€ waitë¥¼ ë§Œë‚˜ì„œ ìê³ ìˆëŠ” ìƒíƒœê°€ ëœë‹¤.
+						//  ê·¸ë¦¬ê³  forë¬¸ì˜ i=1ì¼ë•Œ motherê°€ notifyë¥¼ ë‹¤ì‹œ ë§Œë‚˜ê¸° ë•Œë¬¸ì— ê·¸ë•Œ sonì´ ì¼ì–´ë‚œë‹¤.
+						// sonì€ ì´í›„ thread.sleep(1000)ë¶€í„° ì‹¤í–‰ 
+							
+							
 					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 				}
@@ -34,7 +33,7 @@ public class ATM implements Runnable {
 		if (getDepositeMoney() > 0) {
 			depositeMoney -= howMuch;
 			System.out.print(Thread.currentThread().getName() + " , ");
-			System.out.printf("ÀÜ¾× : %,d ¿ø %n", getDepositeMoney()); 
+			System.out.printf("ì”ì•¡ : %,d ì› %n", getDepositeMoney()); 
 		}
 	}
 
