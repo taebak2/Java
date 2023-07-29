@@ -9,7 +9,7 @@ public class WakeUp implements Runnable{
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		System.out.println("±â»óÇÕ´Ï´Ù");
+		System.out.println("ê¸°ìƒí•©ë‹ˆë‹¤");
 	}
 
 }
