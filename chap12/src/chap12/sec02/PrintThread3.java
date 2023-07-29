@@ -6,14 +6,14 @@ public class PrintThread3 extends Thread {
 	public void run() {
 
 			while (true) {
-				System.out.println("½ÇÇà Áß");
-				if(Thread.interrupted()) { // Thread.interrupted : interrupt È£Ãâ ¿©ºÎ È®ÀÎ
-										   // isInterrupted() : interrupt°¡ È£ÃâµÇ¸é true ¸®ÅÏ
+				System.out.println("ì‹¤í–‰ ì¤‘");
+				if(Thread.interrupted()) { // Thread.interrupted : interrupt í˜¸ì¶œ ì—¬ë¶€ í™•ì¸
+							// isInterrupted() : interruptê°€ í˜¸ì¶œë˜ë©´ true ë¦¬í„´
 					break;
 				}
 		}
-		System.out.println("ÀÚ¿ø Á¤¸®");
-		System.out.println("½ÇÇà Á¾·á");
+		System.out.println("ìì› ì •ë¦¬");
+		System.out.println("ì‹¤í–‰ ì¢…ë£Œ");
 
 	}
 
