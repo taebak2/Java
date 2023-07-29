@@ -8,7 +8,7 @@ public class Sleep extends Thread {
 			
 		} catch (Exception e) {
 		}
-		System.out.println("ÀáÀ» Àâ´Ï´Ù.");
+		System.out.println("ì ì— ë“­ë‹ˆë‹¤.");
 	}
 
 }
