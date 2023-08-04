@@ -4,16 +4,16 @@ public class BoxingExample1 {
 
 	public static void main(String[] args) {
 		
-		// Wrapper Å¬·¡½º ¹Ú½Ì
+		// Wrapper í´ë˜ìŠ¤ ë°•ì‹±
 		Integer obj1 = new Integer(100);
 		Integer obj2 = new Integer("200");
-		Integer obj3 = Integer.valueOf("300");
+		Integer obj3 = Integer.valueOf("300"); // í•´ë‹¹ ë°©ë²•ì´ ë” íš¨ìœ¨ì ì„
 		
-		Integer obj = 100; // ÀÚµ¿ ¹Ú½Ì
-		//Integer objs = "100"; // ¹Ú½Ì x
-		int value = obj + 100; // µÚ¿¡ ÀÖ´Â °ªµµ ÀÚµ¿ ¹Ú½ÌµË´Ï´Ù.
+		Integer obj = 100; // ìë™ ë°•ì‹±
+		//Integer objs = "100"; // ë°•ì‹± x
+		int value = obj + 100; // ë’¤ì— ìˆëŠ” ê°’ë„ ìë™ ë°•ì‹±ë©ë‹ˆë‹¤.
 		
-		// Wrapper Å¬·¡½º ¾ğ¹Ú½Ì(Æ÷Àå ÇØÁ¦)
+		// Wrapper í´ë˜ìŠ¤ ì–¸ë°•ì‹±(í¬ì¥ í•´ì œ)
 		int value1 = obj1.intValue();
 		int value2 = obj2.intValue();
 		int value3 = obj3.intValue();
