@@ -9,7 +9,7 @@ public class IntegerCompareExample {
 		Integer obj4 = 300;
 
 		System.out.println( obj1 == obj2);
-		System.out.println( obj3 == obj4); // byte ¹üÀ§ ¹ş¾î³ª¼­ equals·Î ºñ±³ÇØ¾ßÇÔ
+		System.out.println( obj3 == obj4); // byte ë²”ìœ„ ë²—ì–´ë‚˜ì„œ equalsë¡œ ë¹„êµ
 		
 		
 	}
