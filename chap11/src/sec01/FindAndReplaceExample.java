@@ -3,13 +3,13 @@ package sec01;
 public class FindAndReplaceExample {
 
 	public static void main(String[] args) {
-		String str = "¸ğµç ÇÁ·Î±×·¥Àº ÀÚ¹Ù ¾ğ¾î·Î °³¹ßµÉ ¼ö ÀÖ´Ù.";
-		int index = str.indexOf("ÀÚ¹Ù");
-		if(index==-1) {
-			System.out.println("ÀÚ¹Ù ¹®ÀÚ¿­ÀÌ Æ÷ÇÔµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.");
+		String str = "ëª¨ë“  í”„ë¡œê·¸ë¨ì€ ìë°” ì–¸ì–´ë¡œ ê°œë°œë  ìˆ˜ ìˆë‹¤.";
+		int index = str.indexOf("ìë°”");
+		if(index==-1) { // index -1 = ì¡´ì¬x
+			System.out.println("ìë°” ë¬¸ìì—´ì´ í¬í•¨ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("ÀÚ¹Ù ¹®ÀÚ¿­ÀÌ Æ÷ÇÔµÇ¾î ÀÖ½À´Ï´Ù.");
-			str = str.replace("ÀÚ¹Ù", "Java");
+			System.out.println("ìë°” ë¬¸ìì—´ì´ í¬í•¨ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
+			str = str.replace("ìë°”", "Java");
 			System.out.println("--> " + str);
 		}
 
