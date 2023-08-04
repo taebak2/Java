@@ -14,11 +14,10 @@ public class ClassCastExceptionExample {
 	}
 
 	public static void changeDog(Animal animal) {
-		// if(animal instanceOf Dog) {
+		// if(animal instanceOf Dog) { // instanceOf 객체 타입 확인
 		Dog dog = (Dog) animal;
 
 		// }
-
 	}
 }
 
