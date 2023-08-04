@@ -6,17 +6,15 @@ public class Member {
 	public Member(String id) {
 		this.id = id;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		
-		if (obj instanceof Member) { // instanceof °´Ã¼ Å¸ÀÔ È®ÀÎÇÏ´Â ¿¬»êÀÚ : Çüº¯È¯ °¡´É ¿©ºÎ¸¦ È®ÀÎÇÏ¸ç true / false·Î ¹İÈ¯
-			Member member = (Member) obj; // ¸Å°³º¯¼ö Å¸ÀÔ(Object obj)À» Member Å¸ÀÔÀ¸·Î °­Á¦ º¯È¯
+		if (obj instanceof Member) { // instanceof ê°ì²´ íƒ€ì… í™•ì¸í•˜ëŠ” ì—°ì‚°ì : í˜•ë³€í™˜ ê°€ëŠ¥ ì—¬ë¶€ë¥¼ í™•ì¸í•˜ë©° true / falseë¡œ ë°˜í™˜
+			Member member = (Member) obj; // ë§¤ê°œë³€ìˆ˜ íƒ€ì…(Object obj)ì„ Member íƒ€ì…ìœ¼ë¡œ ê°•ì œ ë³€í™˜
 			if (id.equals(member.id)) {
 				return true;
 			}
 		}
 		return false;
 	}
-
 }
