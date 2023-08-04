@@ -11,9 +11,9 @@ public class NullPointerExceptionExample {
 		System.out.println(data.charAt(1));
 		// System.out.println(num.toString()); // num 값이 int라서 에러(일반 예외)
 		
-		//String data1 = null;
-		//System.out.println(data1.toString());//(실행 예외: NullPointerException = 변수가 null이라서 발생하는 오류)
-											 // String.valueOf vs toString = Null 값에 대한 결과가 다름, ??
+		// String data1 = null;
+		// System.out.println(data1.toString());//(실행 예외: NullPointerException = 변수가 null이라서 발생하는 오류)
+		// String.valueOf vs toString = Null 값에 대한 결과가 다름
 		
 		
 		
