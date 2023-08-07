@@ -19,7 +19,7 @@ public class LinkedListExample {
 			
 		}
 		endTime = System.nanoTime();
-		System.out.println("ArrayList °É¸°½Ã°£ : " + (endTime-startTime) + " ns");
+		System.out.println("ArrayList ê±¸ë¦°ì‹œê°„ : " + (endTime-startTime) + " ns");
 			
 		
 		startTime = System.nanoTime();
@@ -28,7 +28,7 @@ public class LinkedListExample {
 		}
 		
 		endTime = System.nanoTime();
-		System.out.println("LinkedList °É¸°½Ã°£ : " + (endTime-startTime) + " ns");
+		System.out.println("LinkedList ê±¸ë¦°ì‹œê°„ : " + (endTime-startTime) + " ns");
 	}
 
 }
