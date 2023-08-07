@@ -1,5 +1,5 @@
 package sec02;
 
-public class Main {
+public class Main {      
 
 }
