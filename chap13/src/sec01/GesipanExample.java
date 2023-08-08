@@ -7,17 +7,17 @@ public class GesipanExample {
 
 	public static void main(String[] args) {
 
-		List<Gesipan> list = new ArrayList<>(); // Gesipan Å¬·¡½º ÀüÃ¼°¡ ¸®½ºÆ®¿¡ µé¾î°¨
+		List<Gesipan> list = new ArrayList<>(); // Gesipan í´ë˜ìŠ¤ ì „ì²´ê°€ ë¦¬ìŠ¤íŠ¸ì— ë“¤ì–´ê°
 
-		list.add(new Gesipan(1, "8¿ùÃÊ¼ö¾÷ÀÏÁ¤", "ÀÚ¹Ù°³ÀÎÇÁ·ÎÁ§Æ®¹ßÇ¥", "È«±æµ¿"));
-		list.add(new Gesipan(2, "9¿ùÃÊ¼ö¾÷ÀÏÁ¤", "µ¥ÀÌÅÍº£ÀÌ½º", "È«±æµ¿"));
-		list.add(new Gesipan(3, "10¿ùÃÊ¼ö¾÷ÀÏÁ¤", "JSP", "È«±æµ¿"));
-		list.add(new Gesipan(4, "11¿ùÃÊ¼ö¾÷ÀÏÁ¤", "ÆÀÇÁ·ÎÁ§Æ®ÁØºñ", "È«±æµ¿"));
+		list.add(new Gesipan(1, "8ì›”ì´ˆìˆ˜ì—…ì¼ì •", "ìë°”ê°œì¸í”„ë¡œì íŠ¸ë°œí‘œ", "í™ê¸¸ë™"));
+		list.add(new Gesipan(2, "9ì›”ì´ˆìˆ˜ì—…ì¼ì •", "ë°ì´í„°ë² ì´ìŠ¤", "í™ê¸¸ë™"));
+		list.add(new Gesipan(3, "10ì›”ì´ˆìˆ˜ì—…ì¼ì •", "JSP", "í™ê¸¸ë™"));
+		list.add(new Gesipan(4, "11ì›”ì´ˆìˆ˜ì—…ì¼ì •", "íŒ€í”„ë¡œì íŠ¸ì¤€ë¹„", "í™ê¸¸ë™"));
 
 		for (int i = 0; i < list.size(); i++) {
 			Gesipan gesi = list.get(i);
 			
-			System.out.println(list.get(i));
+			System.out.println(list.get(i)); // list ì£¼ì†Œê°’ ì¶œë ¥
 			System.out.println(gesi.number + " " + gesi.subject + " " + gesi.content + gesi.user);
 		}
 	}
