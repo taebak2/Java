@@ -10,19 +10,20 @@ public class Member {
 	}
 
 	@Override
-	public int hashCode() { // nameê³¼ ageê°’ì´ ê°™ìœ¼ë©´ ë™ì¼í•œ hashCodeë¥¼ ë¦¬í„´
-				// hashCode()ëŠ” ë³´í†µ equalsì™€ í•¨ê»˜ ì˜¤ë²„ë¼ì´ë“œí•¨
+	public int hashCode() { // name°ú age°ªÀÌ °°À¸¸é µ¿ÀÏÇÑ hashCode¸¦ ¸®ÅÏ
 		return name.hashCode() + age;
 	}
 
 	@Override
-	public boolean equals(Object obj) { // nameê³¼ ageê°’ì´ ê°™ìœ¼ë©´ true ë¦¬í„´
-		if (obj instanceof Member) { // í˜•ë³€í™˜ ì²´í¬
-			Member member = (Member) obj; // í˜•ë³€í™˜(ë‹¤ìš´ìºìŠ¤íŒ…) 
-						      // Member ê°ì²´ ìƒì„± í•´ì¤˜ì•¼ returnê°’ì„ ë°›ì„ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ê¼­ ìƒì„±í•´ì¤˜ì•¼í•œë‹¤.
-			return member.name.equals(name) && (member.age == age); // Member ê°ì²´ ìƒì„± í•´ì¤˜ì•¼ returnê°’ì„ ë°›ì„ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ê¼­ ìƒì„±í•´ì¤˜ì•¼í•œë‹¤.
+	public boolean equals(Object obj) { // name°ú age°ªÀÌ °°À¸¸é true ¸®ÅÏ
+		if (obj instanceof Member) { 	// instanceof : true or false·Î ¹İÈ¯
+										// obj°¡ Member¿¡ ¼ÓÇÏ´ÂÁö È®ÀÎ
+										
+			
+		Member member = (Member) obj;	// Member °´Ã¼ »ı¼º ÇØÁà¾ß return°ªÀ» ¹ŞÀ» ¼ö ÀÖ±â ¶§¹®¿¡ ²À »ı¼ºÇØÁà¾ßÇÑ´Ù.
+		return member.name.equals(name) && (member.age == age); 
 		} else {
-			return false;
+		return false;
 		}
 	}
 }

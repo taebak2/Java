@@ -9,11 +9,11 @@ public class HashExample2 {
 		
 		Set<Member> set = new HashSet<>();
 		
-		set.add(new Member("홍길동",30));
-		set.add(new Member("홍길동",30));
+		set.add(new Member("ȫ�浿",30));
+		set.add(new Member("ȫ�浿",30));
 		
 		System.out.println(set.size());
-
+		
 	}
 
 }

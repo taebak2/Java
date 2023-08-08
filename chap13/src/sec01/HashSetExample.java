@@ -9,31 +9,29 @@ public class HashSetExample {
 	public static void main(String[] args) {
 		Set<String> set = new HashSet<String>();
 
-		set.add("ìë°”");
-		set.add("ì œì´ë””ë¹„ì”¨");
-		set.add("ì„œë¸”ë¦¿");
-		set.add("ìë°”");
-		set.add("ì•„ì´ë°”í‹°ìŠ¤");
-		set.add("ì œì´ë””ë¹„ì”¨"); // JavaëŠ” í•œ ë²ˆë§Œ ì €ì¥ë¨
+		set.add("ÀÚ¹Ù");
+		set.add("Á¦ÀÌµğºñ¾¾");
+		set.add("¼­ºí¸´");
+		set.add("ÀÚ¹Ù");
+		set.add("¾ÆÀÌ¹ÙÆ¼½º");
+		set.add("Á¦ÀÌµğºñ¾¾"); // Java´Â ÇÑ ¹ø¸¸ ÀúÀåµÊ
 
 		int size = set.size();
-		System.out.println("ì´ ê°ì²´ìˆ˜: " + size);
+		System.out.println("ÃÑ °´Ã¼¼ö: " + size);
 
-		Iterator<String> iter = set.iterator(); // iteratorëŠ” ë°˜ë³µì
-							// setì€ ìˆœì„œê°€ ì—†ê¸° ë•Œë¬¸ì— iteratorë¥¼ ì‚¬ìš©í•´ì•¼ í•œë‹¤.
-		while (iter.hasNext()) { // hasNextëŠ” booleaníƒ€ì… true or falseë¡œ ë°˜í™˜
+		Iterator<String> iter = set.iterator();
+		while (iter.hasNext()) { // hasNext´Â booleanÅ¸ÀÔ true or false·Î ¹İÈ¯
 			String element = iter.next();
 			System.out.println(element);
 		}
 		
 		iter = set.iterator();
-		for (String element : set) { // element = set íƒ€ì… ìë£Œ í¬ê¸°ë§Œí¼ ì¶œë ¥ 
-					     // setì˜ ê°ì²´ë¥¼ elementì— ë„£ê¸° 
-		System.out.println(element);
+		for (String element : set) { // setÀÇ °´Ã¼¸¦ element¿¡ ³Ö±â
+			System.out.println(element);
 		}
 		set.clear();
 		if(set.isEmpty()) {
-		System.out.println("ë¹„ì–´ìˆìŒ");
+			System.out.println("ºñ¾îÀÖÀ½");
 		}
 	}
 
