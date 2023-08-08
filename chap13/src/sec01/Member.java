@@ -10,14 +10,15 @@ public class Member {
 	}
 
 	@Override
-	public int hashCode() { // name°ú age°ªÀÌ °°À¸¸é µ¿ÀÏÇÑ hashCode¸¦ ¸®ÅÏ
+	public int hashCode() { // nameê³¼ ageê°’ì´ ê°™ìœ¼ë©´ ë™ì¼í•œ hashCodeë¥¼ ë¦¬í„´
+				// hashCode()ëŠ” ë³´í†µ equalsì™€ í•¨ê»˜ ì˜¤ë²„ë¼ì´ë“œí•¨
 		return name.hashCode() + age;
 	}
 
 	@Override
-	public boolean equals(Object obj) { // name°ú age°ªÀÌ °°À¸¸é true ¸®ÅÏ
-		if (obj instanceof Member) {
-			Member member = (Member) obj;
+	public boolean equals(Object obj) { // nameê³¼ ageê°’ì´ ê°™ìœ¼ë©´ true ë¦¬í„´
+		if (obj instanceof Member) { // í˜•ë³€í™˜ ì²´í¬
+			Member member = (Member) obj; // í˜•ë³€í™˜(ë‹¤ìš´ìºìŠ¤íŒ…)
 			return member.name.equals(name) && (member.age == age);
 		} else {
 			return false;
