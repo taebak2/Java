@@ -2,8 +2,8 @@ package sec01;
 
 
 public class Word {
-	private String english; // ¿µ¾î
-	private String korean; // ÇÑ±Û
+	private String english; // í•œê¸€
+	private String korean; // ì˜ì–´
 
 	public Word(String english, String korean) {
 		this.english = english;
