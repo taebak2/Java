@@ -20,7 +20,7 @@ public class HashSetExample {
 		System.out.println("총 객체수: " + size);
 
 		Iterator<String> iter = set.iterator(); // iterator는 반복자
-							// set은 순서가 없기 때문에 iterator를 사용해야한다.
+							// set은 순서가 없기 때문에 iterator를 사용해야 한다.
 		while (iter.hasNext()) { // hasNext는 boolean타입 true or false로 반환
 			String element = iter.next();
 			System.out.println(element);
