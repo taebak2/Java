@@ -7,28 +7,28 @@ public class ArrayListSample {
 
 	public static void main(String[] args) {
 
-		List<String> list = new ArrayList<>();
+		List<String> list = new ArrayList<>(); // List íƒ€ì…ì´ intì¸ ê²½ìš° Integerë¡œ í•´ì•¼í•¨
 		list.add("java");
 		list.add("JDBC");
 		list.add("Servlet/JSP");
 		list.add(2, "Database");
-		// 2¹øÂ° ¹æ¿¡ Database Ãß°¡ÇÏ¸é ¿ø·¡ ÀÖ´ø ServletÀÌ ¹Ğ·Á¼­ 3¹øÀÌ µÊ
+		// 2ë²ˆì§¸ ë°©ì— Database ì¶”ê°€í•˜ë©´ ì›ë˜ ìˆë˜ Servletì´ ë°€ë ¤ì„œ 3ë²ˆì´ ë¨
 
 		list.add("iBATIS");
 
-		int size = list.size();
-		System.out.println("ÃÑ °´Ã¼ ¼ö : " + size);
+		int size = list.size(); // sizeë¥¼ intë¡œ ë³€ê²½í•œ ì´ìœ ...?
+		System.out.println("ì´ ê°ì²´ ìˆ˜ : " + size);
 
-		String skill = list.get(2); // 2¹ø¹æÀÇ µ¥ÀÌÅÍ Å¸ÀÔÀÌ StringÀÌ±â ¶§¹®¿¡ String ½áÁà¾ßÇÔ
+		String skill = list.get(2); // 2ë²ˆë°©ì˜ ë°ì´í„° íƒ€ì…ì´ Stringì´ê¸° ë•Œë¬¸ì— String ì¨ì¤˜ì•¼í•¨
 		System.out.println("2 : " + skill);
 
 		for (int i = 0; i < list.size(); i++) {
 			String str = list.get(i);
-			System.out.println(i + " : " + str); // list¿¡ ÀÖ´Â µ¥ÀÌÅÍ Ãâ·Â
+			System.out.println(i + " : " + str); // listì— ìˆëŠ” ë°ì´í„° ì¶œë ¥
 		}
 
-		list.remove(2); // 2¹øÂ° ¹æ µ¥ÀÌÅÍ »èÁ¦(Database)
-		list.remove(2); // 2¹øÂ° ¹æ µ¥ÀÌÅÍ »èÁ¦(3¹ø¹æÀÇ ServletÀÌ 2¹ø¹æÀÇ µ¥ÀÌÅÍÀÎ DatabaseÀÇ »èÁ¦·Î ÀÎÇØ ´ç°ÜÁü)
-		list.remove("iBATIS"); // ³»¿ëÀ¸·Î »èÁ¦ °¡´É
+		list.remove(2); // 2ë²ˆì§¸ ë°© ë°ì´í„° ì‚­ì œ(Database)
+		list.remove(2); // 2ë²ˆì§¸ ë°© ë°ì´í„° ì‚­ì œ(3ë²ˆë°©ì˜ Servletì´ 2ë²ˆë°©ì˜ ë°ì´í„°ì¸ Databaseì˜ ì‚­ì œë¡œ ì¸í•´ ë‹¹ê²¨ì§)
+		list.remove("iBATIS"); // ë‚´ìš©ìœ¼ë¡œ ì‚­ì œ ê°€ëŠ¥
 	}
 }
