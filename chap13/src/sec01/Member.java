@@ -18,8 +18,9 @@ public class Member {
 	@Override
 	public boolean equals(Object obj) { // name과 age값이 같으면 true 리턴
 		if (obj instanceof Member) { // 형변환 체크
-			Member member = (Member) obj; // 형변환(다운캐스팅)
-			return member.name.equals(name) && (member.age == age);
+			Member member = (Member) obj; // 형변환(다운캐스팅) 
+						      // Member 객체 생성 해줘야 return값을 받을 수 있기 때문에 꼭 생성해줘야한다.
+			return member.name.equals(name) && (member.age == age); // Member 객체 생성 해줘야 return값을 받을 수 있기 때문에 꼭 생성해줘야한다.
 		} else {
 			return false;
 		}
