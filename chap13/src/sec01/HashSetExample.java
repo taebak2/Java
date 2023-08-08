@@ -28,11 +28,12 @@ public class HashSetExample {
 		
 		iter = set.iterator();
 		for (String element : set) { // element = set 타입 자료 크기만큼 출력 
-			System.out.println(element);
+					     // set의 객체를 element에 넣기 
+		System.out.println(element);
 		}
 		set.clear();
 		if(set.isEmpty()) {
-			System.out.println("비어있음");
+		System.out.println("비어있음");
 		}
 	}
 
