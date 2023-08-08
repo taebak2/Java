@@ -15,32 +15,32 @@ public class CarExample {
 		boolean run = true;
 
 		while (run) {
-			System.out.println("ÀÛ¾÷ ³»¿ëÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä");
-			System.out.println("Ãß°¡´Â 1¹ø, »èÁ¦´Â 2¹ø, Ãâ·ÂÀº 3¹ø, Á¾·á´Â 4¹ø");
+			System.out.println("ì‘ì—… ë‚´ìš©ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
+			System.out.println("ì¶”ê°€ëŠ” 1ë²ˆ, ì‚­ì œëŠ” 2ë²ˆ, ì¶œë ¥ì€ 3ë²ˆ, ì¢…ë£ŒëŠ” 4ë²ˆ");
 			int num = 0;
 			try {
 				num = s.nextInt();
 			} catch (InputMismatchException e) {
-				System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
-				return;
+				System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
+				return; // whileë¬¸ ë°–ìœ¼ë¡œ ë‚˜ì˜´
 			}
 
 			switch (num) {
 			case 1:
-				System.out.println("Â÷·® Á¦Á¶È¸»ç´Â?");
+				System.out.println("ì°¨ëŸ‰ ì œì¡°íšŒì‚¬ëŠ”?");
 				String company = s.next();
-				System.out.println("Â÷·® °¡°İÀº?");
+				System.out.println("ì°¨ëŸ‰ ê°€ê²©ì€?");
 				int cost = s.nextInt();
 
-				System.out.println("Â÷·® ÃÖ°í ¼Óµµ´Â?");
+				System.out.println("ì°¨ëŸ‰ ìµœê³  ì†ë„ëŠ”?");
 				int speed = s.nextInt();
-				System.out.println("Â÷·® »ö»óÀº?");
+				System.out.println("ì°¨ëŸ‰ ìƒ‰ìƒì€?");
 				String color = s.next();
 
 				list.add(new Car(company, cost, speed, color));
 				break;
 			case 2:
-				System.out.println("»èÁ¦ÇÒ µ¥ÀÌÅÍÀÇ ÀÎµ¦½º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+				System.out.println("ì‚­ì œí•  ë°ì´í„°ì˜ ì¸ë±ìŠ¤ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 				int del = s.nextInt();
 				list.remove(del);
 				break;
@@ -52,23 +52,23 @@ public class CarExample {
 				}
 				break;
 			case 4:
-				System.out.println("Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				run = false;
 				break;
 			}
 		}
 
-		// 1 µ¥ÀÌÅÍ Ãß°¡
-		// »ç¿ëÀÚ·ÎºÎÅÍ µ¥ÀÌÅÍ ÀÔ·Â ¹Ş¾Æ ÀÚµ¿Â÷ Å¬·¡½º °´Ã¼¸¦ »ı¼ºÇÏ¿©
-		// ¸®½ºÆ®¿¡ Ãß°¡ÇÏ¼¼¿ä
+		// 1 ë°ì´í„° ì¶”ê°€
+		// ì‚¬ìš©ìë¡œë¶€í„° ë°ì´í„° ì…ë ¥ ë°›ì•„ ìë™ì°¨ í´ë˜ìŠ¤ ê°ì²´ë¥¼ ìƒì„±í•˜ì—¬
+		// ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•˜ì„¸ìš”
 
-		// 2 µ¥ÀÌÅÍ »èÁ¦
-		// »ç¿ëÀÚ·ÎºÎÅÍ ¹æ ¹øÈ£¸¦ ÀÔ·Â¹Ş¾Æ (index) ¸®½ºÆ® µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ¼¼¿ä
+		// 2 ë°ì´í„° ì‚­ì œ
+		// ì‚¬ìš©ìë¡œë¶€í„° ë°© ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ì•„ (index) ë¦¬ìŠ¤íŠ¸ ë°ì´í„°ë¥¼ ì‚­ì œí•˜ì„¸ìš”
 
-		// 3 µ¥ÀÌÅÍ Ãâ·Â
-		// ÀÔ·ÂµÈ ¸®½ºÆ® µ¥ÀÌÅÍ¸¦ ¸ğµÎ Ãâ·ÂÇÏ¼¼¿ä
+		// 3 ë°ì´í„° ì¶œë ¥
+		// ì…ë ¥ëœ ë¦¬ìŠ¤íŠ¸ ë°ì´í„°ë¥¼ ëª¨ë‘ ì¶œë ¥í•˜ì„¸ìš”
 
-		// ¿¹¿Ü Ã³¸®
+		// ì˜ˆì™¸ ì²˜ë¦¬
 
 	}
 
