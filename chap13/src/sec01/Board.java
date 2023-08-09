@@ -1,9 +1,9 @@
 package sec01;
 
 public class Board {
-	String subject; // Á¦¸ñ
-	String content; // ³»¿ë
-	String writer; // ±Û¾´ÀÌ
+	String subject; // ì œëª©
+	String content; // ë‚´ìš©
+	String writer; // ê¸€ì“´ì´
 
 	public Board(String subject, String content, String writer) {
 		this.subject = subject;
