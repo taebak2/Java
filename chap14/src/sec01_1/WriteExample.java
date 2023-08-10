@@ -7,7 +7,7 @@ public class WriteExample {
 
 	public static void main(String[] args) throws Exception{
 		
-		Writer writer = new FileWriter("c:/temp/test8.txt"); // Writer ¹®ÀÚ ±â¹İ Ãâ·Â ½ºÆ®¸²
+		Writer writer = new FileWriter("c:/temp/test8.txt"); // ë¬¸ì ê¸°ë°˜ ì¶œë ¥ ìŠ¤íŠ¸ë¦¼
 		
 		char[] array = {'A','B','C'};
 		
