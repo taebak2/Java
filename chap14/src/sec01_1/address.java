@@ -11,7 +11,7 @@ public class address {
 	public static void main(String[] args) throws Exception {
 		Scanner s = new Scanner(System.in);
 		Writer writer = new FileWriter("c:/temp/address3.txt");
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì£¼ì†Œë¥¼ ìž…ë ¥í•˜ì„¸ìš”");
 		String ads = s.nextLine();
 		writer.write(ads);
 		writer.flush();
