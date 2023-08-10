@@ -21,7 +21,7 @@ public class WriteExmaple4 {
 		os.flush();
 		os.close();
 		
-		// ABC Ãâ·Â
+		// ABC ì¶œë ¥
 		
 	}
 
