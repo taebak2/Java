@@ -7,11 +7,11 @@ public class WriteExample2 {
 
 	public static void main(String[] args) throws Exception {
 		OutputStream os = new FileOutputStream("C:/temp/test.txt");
-		byte[]data = "ABC".getBytes(); // ¹®ÀÚ¿­ ABC¸¦ ÇÏ³ª¾¿ Àß¶ó¼­ °¡Á®¿À±â 
+		byte[]data = "ABC".getBytes(); // ë¬¸ìì—´ ABCë¥¼ í•˜ë‚˜ì”© ì˜ë¼ì„œ ê°€ì ¸ì˜¤ê¸° 
 		for (int i = 0; i < data.length; i++) {
-			os.write(data[i]); // "A", "B", "C" ¸¦ ÇÏ³ª¾¿ Ãâ·Â
+			os.write(data[i]);     // "A", "B", "C" ë¥¼ í•˜ë‚˜ì”© ì¶œë ¥
 		}
-		os.flush(); // data ¹è¿­ÀÇ µ¥ÀÌÅÍ°ªÀÌ ¸ğµÎ ºñ¿öÁü
+		os.flush(); 		       // data ë°°ì—´ì˜ ë°ì´í„°ê°’ì´ ëª¨ë‘ ë¹„ì›Œì§
 		os.close();
 	}
 
