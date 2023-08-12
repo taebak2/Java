@@ -10,8 +10,8 @@ public class ReadExample1 {
 
 		byte[] buffer = new byte[5];
 
-		int readByteNum = is.read(buffer, 2, 3); //  ÀÎµ¦½º 2ºÎÅÍ ½ÃÀÛÇÏ¿© ÃÖ´ë 3 ¹ÙÀÌÆ®¸¦ ÀĞ¾î¿Í¼­ ¹è¿­¿¡ ÀúÀåÇÏ°í, ½ÇÁ¦·Î ÀĞ¾îµéÀÎ ¹ÙÀÌÆ® ¼ö¸¦ readByteNum º¯¼ö¿¡ ÀúÀå
-		if (readByteNum != -1) { // -1 = ÆÄÀÏÀÇ ³¡ÀÌ ¾Æ´Ï¶ó¸é ÀĞ¾îµéÀÎ µ¥ÀÌÅÍ¸¦ Ãâ·Â
+		int readByteNum = is.read(buffer, 2, 3); //  ì¸ë±ìŠ¤ 2ë¶€í„° ì‹œì‘í•˜ì—¬ ìµœëŒ€ 3 ë°”ì´íŠ¸ë¥¼ ì½ì–´ì™€ì„œ ë°°ì—´ì— ì €ì¥í•˜ê³ , ì‹¤ì œë¡œ ì½ì–´ë“¤ì¸ ë°”ì´íŠ¸ ìˆ˜ë¥¼ readByteNum ë³€ìˆ˜ì— ì €ì¥
+		if (readByteNum != -1) { 		 // -1 = íŒŒì¼ì˜ ëì´ ì•„ë‹ˆë¼ë©´ ì½ì–´ë“¤ì¸ ë°ì´í„°ë¥¼ ì¶œë ¥
 			for (int i = 0; i < buffer.length; i++) {
 				System.out.println(buffer[i]);
 			}
