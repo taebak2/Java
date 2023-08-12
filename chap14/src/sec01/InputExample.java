@@ -8,14 +8,14 @@ public class InputExample {
 
 	public static void main(String[] args) throws Exception{
 		
-		InputStream is = new FileInputStream("c:/temp/test1.db"); // "c:/temp/test1.db" °æ·Î¿¡ ÀÖ´Â ÆÄÀÏÀ» ¿¬´Ù.
+		InputStream is = new FileInputStream("c:/temp/test1.db"); // "c:/temp/test1.db" ê²½ë¡œì— ìˆëŠ” íŒŒì¼ì„ ì—°ë‹¤.
 		
 		while(true) {
-			int data = is.read(); 	// ÆÄÀÏ¿¡¼­ ¹ÙÀÌÆ® ÇÏ³ª¸¦ ÀĞ¾îµéÀÌ°í ±× °ªÀ» data º¯¼ö¿¡ ÀúÀåÇÕ´Ï´Ù. 
-			if(data==-1) break;		// read() ¸Ş¼­µå´Â ÆÄÀÏÀÇ ³¡¿¡ µµ´ŞÇÏ¸é -1À» ¹İÈ¯ÇÕ´Ï´Ù.
+			int data = is.read(); 	// íŒŒì¼ì—ì„œ ë°”ì´íŠ¸ í•˜ë‚˜ë¥¼ ì½ì–´ë“¤ì´ê³  ê·¸ ê°’ì„ data ë³€ìˆ˜ì— ì €ì¥í•©ë‹ˆë‹¤. 
+			if(data==-1) break;	// read() ë©”ì„œë“œëŠ” íŒŒì¼ì˜ ëì— ë„ë‹¬í•˜ë©´ -1ì„ ë°˜í™˜í•©ë‹ˆë‹¤.
 			System.out.println(data);
 		}
-		is.close(); // Ãâ·Â ½ºÆ®¸² ´İ±â 
+		is.close(); // ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ë‹«ê¸° 
 
 	}
 
