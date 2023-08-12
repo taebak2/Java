@@ -7,16 +7,16 @@ import java.util.Scanner;
 public class WriteExmaple5 {
 
 	public static void main(String[] args) throws Exception {
-		// ½ºÄ³³Ê¸¦ ÅëÇØ »ç¿ëÀÚ¿¡°Ô ÁÖ¼Ò¸¦ ÀÔ·Â¹Ş±â
-		// ¿¹) ±¤ÁÖ ºÏ±¸, ±¤ÁÖ ¼­±¸, ±¤ÁÖ µ¿±¸
+		// ìŠ¤ìºë„ˆë¥¼ í†µí•´ ì‚¬ìš©ìì—ê²Œ ì£¼ì†Œë¥¼ ì…ë ¥ë°›ê¸°
+		// ì˜ˆ) ê´‘ì£¼ ë¶êµ¬, ê´‘ì£¼ ì„œêµ¬, ê´‘ì£¼ ë™êµ¬
 
 		Scanner s = new Scanner(System.in);
 		OutputStream os = new FileOutputStream("c:/temp/test3.txt");
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·Â ÇÏ¼¼¿ä");
+		System.out.println("ì£¼ì†Œë¥¼ ì…ë ¥ í•˜ì„¸ìš”");
 		String address = s.nextLine();
 		byte[] data = address.getBytes();
 
-		os.write(data, 5, 4); // ÇÑ±ÛÀº ÇÑ ±ÛÀÚ´ç 2¹ÙÀÌÆ®...  
+		os.write(data, 5, 4); // í•œê¸€ì€ í•œ ê¸€ìë‹¹ 2ë°”ì´íŠ¸
 
 		os.flush();
 		os.close();
