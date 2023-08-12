@@ -16,10 +16,10 @@ public class WriteExmaple4 {
 		OutputStream os = new FileOutputStream("c:/temp/test2.txt");
 		byte[]	data = "ABC".getBytes();
 		os.write(data);
-		os.flush();
+		os.flush(); // ABC 출력
 		os.close();
 		
-		// ABC 출력
+		
 		
 	}
 
