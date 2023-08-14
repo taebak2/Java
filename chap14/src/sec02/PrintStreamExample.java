@@ -15,6 +15,7 @@ PrintStream ps = new PrintStream(fos);
 		ps.println("프린터가 출력하는 것처럼 ");
 		ps.println("데이터를 출력합니다.");
 		
+
 		ps.flush();
 		ps.close();
 	}
