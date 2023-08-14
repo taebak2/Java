@@ -4,30 +4,31 @@ import java.io.*;
 
 
 public class CharacterConverterStreamExample {
-	// ¹®ÀÚ º¯È¯ ½ºÆ®¸²À» »ç¿ëÇÏ¿© ÅØ½ºÆ® ÆÄÀÏÀ» ¾²°í ÀĞ´Â ¹æ¹ı
+	// ë¬¸ì ë³€í™˜ ìŠ¤íŠ¸ë¦¼ì„ ì‚¬ìš©í•˜ì—¬ í…ìŠ¤íŠ¸ íŒŒì¼ì„ ì“°ê³  ì½ëŠ” ë°©ë²•
 
 	public static void main(String[] args) throws Exception {
-		write("¹®ÀÚ º¯È¯ ½ºÆ®¸²À» »ç¿ëÇÕ´Ï´Ù."); // ¸Ş¼Òµå, ¸Å°³º¯¼ö ¹®ÀÚ¿­ : ÇØ´ç ¹®ÀÚ¿­À» ÆÄÀÏ¿¡ ÀÛ¼º
-		String data = read(); // read¸Ş¼Òµå ¸®ÅÏÅ¸ÀÔ ½ºÆ®¸µ
+		write("ë¬¸ì ë³€í™˜ ìŠ¤íŠ¸ë¦¼ì„ ì‚¬ìš©í•©ë‹ˆë‹¤."); // ë©”ì†Œë“œ, ë§¤ê°œë³€ìˆ˜ ë¬¸ìì—´ : í•´ë‹¹ ë¬¸ìì—´ì„ íŒŒì¼ì— ì‘ì„±
+	
+	String data = read(); // readë©”ì†Œë“œ ë¦¬í„´íƒ€ì… ìŠ¤íŠ¸ë§
 		System.out.println(data);
 
 	}
 
 	public static void write(String str) throws Exception {
 		FileOutputStream fos = new FileOutputStream("c:/temp/test1.txt");
-		Writer writer = new OutputStreamWriter(fos); // new OutPutStreamWriter : ¹ÙÀÌÆ® Å¸ÀÔÀÇ ½ºÆ®¸²À» ¹®ÀÚ ½ºÆ®¸²À¸·Î º¯È¯ÇÏ´Â ¿ªÇÒ
+		Writer writer = new OutputStreamWriter(fos); // new OutPutStreamWriter : ë°”ì´íŠ¸ íƒ€ì…ì˜ ìŠ¤íŠ¸ë¦¼ì„ ë¬¸ì ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë³€í™˜í•˜ëŠ” ì—­í• 
 		writer.write(str);
 		writer.flush();
 		writer.close();
 	}
 
-	public static String read() throws Exception { // ¸ŞÀÎ ±¸¹®ÀÌ staticÀÌ¶ó¼­ staticÀ» ²À ½áÁà¾ßÇÔ
+	public static String read() throws Exception { // ë©”ì¸ êµ¬ë¬¸ì´ staticì´ë¼ì„œ staticì„ ê¼­ ì¨ì¤˜ì•¼í•¨
 		FileInputStream fis = new FileInputStream("c:/temp/test1.txt");
-		Reader reader = new InputStreamReader(fis); // new InputStreamReader : fis¸¦ ¹®ÀÚ º¯È¯ ½ºÆ®¸²À¸·Î ¿¬°á
+		Reader reader = new InputStreamReader(fis); // new InputStreamReader : fisë¥¼ ë¬¸ì ë³€í™˜ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ì—°ê²°
 		char[] buffer = new char[100];
 		int readCharNum = reader.read(buffer);
 		reader.close();
-		String data = new String(buffer, 0, readCharNum); // buffer ¹è¿­ÀÇ ³»¿ëÀ» ¹®ÀÚ¿­·Î º¯È¯ÇÏ¿© ¹İÈ¯
+		String data = new String(buffer, 0, readCharNum); // buffer ë°°ì—´ì˜ ë‚´ìš©ì„ ë¬¸ìì—´ë¡œ ë³€í™˜í•˜ì—¬ ë°˜í™˜
 		return data;
 	}
 }
