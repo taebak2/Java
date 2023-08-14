@@ -8,8 +8,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ObjectStreamExample {
 
 	public static void main(String[] args) throws Exception {
-		writeList(); // °´Ã¼¸¦ ÆÄÀÏ¿¡ ÀúÀå
-		List<Board> list = readList(); // ÆÄÀÏ¿¡¼­ °´Ã¼¸¦ ÀĞ¾î¿È
+		writeList(); // ê°ì²´ë¥¼ íŒŒì¼ì— ì €ì¥
+		List<Board> list = readList(); // íŒŒì¼ì—ì„œ ê°ì²´ë¥¼ ì½ì–´ì˜´
+
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		for (Board board : list) {
@@ -19,22 +20,22 @@ public class ObjectStreamExample {
 	}
 
 	public static void writeList() throws Exception {
-		List<Board> list = new ArrayList<>(); // main±¸¹® list¶û °ü·Ã x : Áö¿ª º¯¼ö 
+		List<Board> list = new ArrayList<>(); // mainêµ¬ë¬¸ listë‘ ê´€ë ¨ x : ì§€ì—­ ë³€ìˆ˜ 
 
-		list.add(new Board(1, "Á¦¸ñ1", "³»¿ë1", "±Û¾´ÀÌ1", new Date())); // Board °´Ã¼¸¦ »ı¼ºÇØ ¸®½ºÆ®¿¡ Ãß°¡
-		list.add(new Board(2, "Á¦¸ñ2", "³»¿ë2", "±Û¾´ÀÌ2", new Date()));
-		list.add(new Board(3, "Á¦¸ñ3", "³»¿ë3", "±Û¾´ÀÌ3", new Date()));
-		FileOutputStream fos = new FileOutputStream("c:/temp/board.db"); // ÀúÀå
-		ObjectOutputStream oos = new ObjectOutputStream(fos); // ¸®½ºÆ®¸¦ Á÷·ÄÈ­
+		list.add(new Board(1, "ì œëª©1", "ë‚´ìš©1", "ê¸€ì“´ì´1", new Date())); // Board ê°ì²´ë¥¼ ìƒì„±í•´ ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€
+		list.add(new Board(2, "ì œëª©2", "ë‚´ìš©2", "ê¸€ì“´ì´2", new Date()));
+		list.add(new Board(3, "ì œëª©3", "ë‚´ìš©3", "ê¸€ì“´ì´3", new Date()));
+		FileOutputStream fos = new FileOutputStream("c:/temp/board.db"); // ì €ì¥
+		ObjectOutputStream oos = new ObjectOutputStream(fos); // ë¦¬ìŠ¤íŠ¸ë¥¼ ì§ë ¬í™”
 		oos.writeObject(list);
 		oos.flush();
 		oos.close();
 	}
 
-	public static List<Board> readList() throws Exception { // readList(); : °´Ã¼ ¸®½ºÆ®¸¦ ¿ªÁ÷·ÄÈ­ÇØ ÀĞ¾î¿Â ÈÄ, ±× ¸®½ºÆ®¸¦ ¹İÈ¯
+	public static List<Board> readList() throws Exception { // readList(); : ê°ì²´ ë¦¬ìŠ¤íŠ¸ë¥¼ ì—­ì§ë ¬í™”í•´ ì½ì–´ì˜¨ í›„, ê·¸ ë¦¬ìŠ¤íŠ¸ë¥¼ ë°˜í™˜
 		FileInputStream fis = new FileInputStream("c:/temp/board.db");
 		ObjectInputStream ois = new ObjectInputStream(fis);
-		List<Board> list = (List<Board>) ois.readObject(); // objectÅ¸ÀÔÀ¸·Î ÀĞ¾î¿Â ÈÄ, BoardÅ¸ÀÔÀ¸·Î º¯È¯ ÇØÁà¾ßÇÔ 
+		List<Board> list = (List<Board>) ois.readObject(); // objectíƒ€ì…ìœ¼ë¡œ ì½ì–´ì˜¨ í›„, Boardíƒ€ì…ìœ¼ë¡œ ë³€í™˜ í•´ì¤˜ì•¼í•¨ 
 		return list;
 	}
 }
