@@ -10,6 +10,7 @@ public class PrintStreamExample {
 		
 PrintStream ps = new PrintStream(fos);
 		
+
 		ps.println("[프린터 보조 스트림]");
 		ps.print("마치 ");
 		ps.println("프린터가 출력하는 것처럼 ");
