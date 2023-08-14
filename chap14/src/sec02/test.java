@@ -7,35 +7,36 @@ import java.io.Reader;
 import java.io.Writer;
 import java.util.Scanner;
 
+
 public class test {
 
-	// ½ºÄ³³Ê¸¦ ÀÌ¿ë
-	// ÀüÈ­¹øÈ£¸¦ ÀÔ·Â¹Ş¾Æ c:/temp/phone.txt ÆÄÀÏ·Î ÀúÀåÇÏ¼¼¿ä
+	// ìŠ¤ìºë„ˆë¥¼ ì´ìš©
+	// ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ì•„ c:/temp/phone.txt íŒŒì¼ë¡œ ì €ì¥í•˜ì„¸ìš”
 	// ex) 010 8855 8779
-	// »ç¿ëÀÚ°¡ ±×¸¸ÇÒ ¶§±îÁö ÀÔ·Â ¹ŞÀ¸¼¼¿ä
-	// bufferedReader ¸¦ ÀÌ¿ëÇØ ÄÜ¼ÖÃ¢¿¡ ÀÔ·ÂµÈ ÀüÈ­¹øÈ£ Ãâ·Â
+	// ì‚¬ìš©ìê°€ ê·¸ë§Œí•  ë•Œê¹Œì§€ ì…ë ¥ ë°›ìœ¼ì„¸ìš”
+	// bufferedReader ë¥¼ ì´ìš©í•´ ì½˜ì†”ì°½ì— ì…ë ¥ëœ ì „í™”ë²ˆí˜¸ ì¶œë ¥
 
 	public static void main(String[] args) throws Exception {
 		Scanner s = new Scanner(System.in);
-		FileOutputStream os = new FileOutputStream("c:/temp/phone.txt"); // ÆÄÀÏ¿¡ ÀúÀå FileOutputStream vs OutputStream
+		FileOutputStream os = new FileOutputStream("c:/temp/phone.txt"); // íŒŒì¼ì— ì €ì¥ FileOutputStream vs OutputStream
 		Writer w = new OutputStreamWriter(os);
 		while (true) {
-			System.out.println("ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 			String put = s.nextLine();
-			if (put.equals("±×¸¸"))
+			if (put.equals("ê·¸ë§Œ"))
 				break;
 			w.write(put + "\n");
 		}
-		os.flush(); // ¸ğµç ¹ÙÀÌÆ®¸¦ Ãâ·Â
-		os.close(); // Ãâ·Â ½ºÆ®¸² ´İ±â
+		os.flush(); // ëª¨ë“  ë°”ì´íŠ¸ë¥¼ ì¶œë ¥
+		os.close(); // ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ë‹«ê¸°
 
-		Reader reader = new FileReader("c:/temp/phone.txt"); // °´Ã¼ reader »ı¼º 
-		BufferedReader br = new BufferedReader(reader); // bufferedReader °´Ã¼ br »ı¼º : ÆÄÀÏ ³»¿ë ÀĞ±â
+		Reader reader = new FileReader("c:/temp/phone.txt"); // ê°ì²´ reader ìƒì„± 
+		BufferedReader br = new BufferedReader(reader); // bufferedReader ê°ì²´ br ìƒì„± : íŒŒì¼ ë‚´ìš© ì½ê¸°
 		while (true) {
 			String data = br.readLine(); 
-										 // readLine ¸Ş¼Òµå´Â ÇöÀç ÆÄÀÏÀÇ À§Ä¡¿¡¼­ ÇÑ ÁÙÀ» ÀĞ¾î ¹®ÀÚ¿­·Î ¹İÈ¯
-										 // ÀĞ¾î¿Â ÁÙÀÇ ³¡¿¡ ÀÖ´Â °³Çà ¹®ÀÚ ('\n')´Â Æ÷ÇÔÇÏÁö ¾ÊÀ½
-										 // ÆÄÀÏÀÇ ³¡¿¡ µµ´ŞÇØ ´õ ÀÌ»ó ÀĞÀ» ³»¿ëÀÌ ¾øÀ» °æ¿ì, nullÀ» ¹İÈ¯
+										 // readLine ë©”ì†Œë“œëŠ” í˜„ì¬ íŒŒì¼ì˜ ìœ„ì¹˜ì—ì„œ í•œ ì¤„ì„ ì½ì–´ ë¬¸ìì—´ë¡œ ë°˜í™˜
+										 // ì½ì–´ì˜¨ ì¤„ì˜ ëì— ìˆëŠ” ê°œí–‰ ë¬¸ì ('\n')ëŠ” í¬í•¨í•˜ì§€ ì•ŠìŒ
+										 // íŒŒì¼ì˜ ëì— ë„ë‹¬í•´ ë” ì´ìƒ ì½ì„ ë‚´ìš©ì´ ì—†ì„ ê²½ìš°, nullì„ ë°˜í™˜
 			if (data == null)
 				break;
 			System.out.println(data);
