@@ -3,12 +3,13 @@ package sec02;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Board implements Serializable { // Serializable Á÷·ÄÈ­
-	private int bno; // °Ô½ÃÆÇ ¹øÈ£
-	private String title; // Á¦¸ñ
-	private String content; // ³»¿ë
-	private String writer; // ±Û¾´ÀÌ
-	private Date date; // ÀÛ¼º ³¯Â¥
+public class Board implements Serializable { // Serializable ì§ë ¬í™”
+
+	private int bno; // ê²Œì‹œíŒ ë²ˆí˜¸
+	private String title; // ì œëª©
+	private String content; // ë‚´ìš©
+	private String writer; // ê¸€ì“´ì´
+	private Date date; // ì‘ì„± ë‚ ì§œ
 
 	public Board(int bno, String title, String content, String writer, Date date) {
 		this.bno = bno;
