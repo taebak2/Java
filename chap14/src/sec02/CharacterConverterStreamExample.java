@@ -17,6 +17,7 @@ public class CharacterConverterStreamExample {
 	public static void write(String str) throws Exception {
 		FileOutputStream fos = new FileOutputStream("c:/temp/test1.txt");
 		Writer writer = new OutputStreamWriter(fos); // new OutPutStreamWriter : 바이트 타입의 스트림을 문자 스트림으로 변환하는 역할
+
 		writer.write(str);
 		writer.flush();
 		writer.close();
