@@ -6,10 +6,11 @@ public class NonBufferVsBufferExample {
 
 	public static void main(String[] args) throws Exception {
 
-		String originalFilePath1 = NonBufferVsBufferExample.class.getResource("originalFile1.jpg").getPath(); // getResource : ÆÄÀÏ °¡Á®¿È, getPath() : °æ·Î
-		String targetFilePath1 = "C:/Temp/targetFile1.jpg"; // Å¸°Ù
-		FileInputStream fis = new FileInputStream(originalFilePath1); // ¿øº» ÀÌ¹ÌÁö ÆÄÀÏ ÀĞ±â
-		FileOutputStream fos = new FileOutputStream(targetFilePath1); // ´ë»ó ÆÄÀÏ Ãâ·Â
+		String originalFilePath1 = NonBufferVsBufferExample.class.getResource("originalFile1.jpg").getPath(); // getResource : íŒŒì¼ ê°€ì ¸ì˜´, getPath() : ê²½ë¡œ
+		String targetFilePath1 = "C:/Temp/targetFile1.jpg"; // íƒ€ê²Ÿ
+		FileInputStream fis = new FileInputStream(originalFilePath1); // ì›ë³¸ ì´ë¯¸ì§€ íŒŒì¼ ì½ê¸°
+		FileOutputStream fos = new FileOutputStream(targetFilePath1); // ëŒ€ìƒ íŒŒì¼ ì¶œë ¥
+
 
 		String originalFilePath2 = NonBufferVsBufferExample.class.getResource("originalFile2.jpg").getPath();
 		String targetFilePath2 = "C:/Temp/targetFile2.jpg";
@@ -19,10 +20,10 @@ public class NonBufferVsBufferExample {
 		BufferedOutputStream bos = new BufferedOutputStream(fos2);
 
 		long nonBufferTime = copy(fis, fos);
-		System.out.println("¹öÆÛ¸¦ »ç¿ëÇÏÁö ¾ÊÀ» ¶§ : " + nonBufferTime + "ns");
+		System.out.println("ë²„í¼ë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šì„ ë•Œ : " + nonBufferTime + "ns");
 
 		
-		 long BufferTime = copy(bis, bos); System.out.println("¹öÆÛ¸¦ »ç¿ëÇßÀ» ¶§ : \t\t" +BufferTime + "ns");
+		 long BufferTime = copy(bis, bos); System.out.println("ë²„í¼ë¥¼ ì‚¬ìš©í–ˆì„ ë•Œ : \t\t" +BufferTime + "ns");
 		 
 	}
 
