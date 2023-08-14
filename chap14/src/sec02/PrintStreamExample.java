@@ -7,12 +7,13 @@ public class PrintStreamExample {
 	public static void main(String[] args) throws Exception{
 		
 		FileOutputStream fos = new FileOutputStream("c:/temp/printstream.txt");
-		PrintStream ps = new PrintStream(fos);
 		
-		ps.println("[ÇÁ¸°ÅÍ º¸Á¶ ½ºÆ®¸²]");
-		ps.print("¸¶Ä¡ ");
-		ps.println("ÇÁ¸°ÅÍ°¡ Ãâ·ÂÇÏ´Â °ÍÃ³·³ ");
-		ps.println("µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÕ´Ï´Ù.");
+PrintStream ps = new PrintStream(fos);
+		
+		ps.println("[í”„ë¦°í„° ë³´ì¡° ìŠ¤íŠ¸ë¦¼]");
+		ps.print("ë§ˆì¹˜ ");
+		ps.println("í”„ë¦°í„°ê°€ ì¶œë ¥í•˜ëŠ” ê²ƒì²˜ëŸ¼ ");
+		ps.println("ë°ì´í„°ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.");
 		
 		ps.flush();
 		ps.close();
