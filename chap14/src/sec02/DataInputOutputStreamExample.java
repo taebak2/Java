@@ -9,21 +9,22 @@ public class DataInputOutputStreamExample {
 
 	public static void main(String[] args) throws Exception {
 
-		FileOutputStream fos = new FileOutputStream("c:/temp/primitive.db"); // ÆÄÀÏ¿¡ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÏ±â À§ÇÑ ½ºÆ®¸²
-		DataOutputStream dos = new DataOutputStream(fos); // ±âº» µ¥ÀÌÅÍ Å¸ÀÔ(primitive data types)À» ÀÌÁø ÇüÅÂ·Î ÆÄÀÏ¿¡ Ãâ·ÂÇÏ´Â ½ºÆ®¸²
+		FileOutputStream fos = new FileOutputStream("c:/temp/primitive.db"); // íŒŒì¼ì— ë°ì´í„°ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ ìŠ¤íŠ¸ë¦¼
+		DataOutputStream dos = new DataOutputStream(fos); // ê¸°ë³¸ ë°ì´í„° íƒ€ì…(primitive data types)ì„ ì´ì§„ í˜•íƒœë¡œ íŒŒì¼ì— ì¶œë ¥í•˜ëŠ” ìŠ¤íŠ¸ë¦¼
 
-		dos.writeUTF("È«±æµ¿");
+		dos.writeUTF("í™ê¸¸ë™");
 		dos.writeDouble(95.5);
 		dos.writeInt(1);
 
-		dos.writeUTF("±èÀÚ¹Ù");
+		dos.writeUTF("ê¹€ìë°”");
 		dos.writeDouble(90.3);
 		dos.writeInt(2);
 
 		dos.flush();
 		dos.close();
 
-		FileInputStream fis = new FileInputStream("c:/temp/primitive.db"); // ÀÔ·Â ½ºÆ®¸² : µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿À´Âµ¥ »ç¿ëµÇ´Â ½ºÆ®¸²
+		FileInputStream fis = new FileInputStream("c:/temp/primitive.db");
+ // ì…ë ¥ ìŠ¤íŠ¸ë¦¼ : ë°ì´í„°ë¥¼ ì½ì–´ì˜¤ëŠ”ë° ì‚¬ìš©ë˜ëŠ” ìŠ¤íŠ¸ë¦¼
 		DataInputStream dis = new DataInputStream(fis);
 
 		for (int i = 0; i < 2; i++) {
