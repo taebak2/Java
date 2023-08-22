@@ -18,7 +18,7 @@ class Ball {
 
         rd = new Random();
 
-        int s = rd.nextInt(5);
+        int s = rd.nextInt(speed.length);
         xStep = speed[s];
         yStep = speed[s];
     }
