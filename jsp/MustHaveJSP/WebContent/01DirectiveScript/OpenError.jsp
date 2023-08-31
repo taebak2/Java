@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%!String str1 = "JSP";%>
-
+	pageEncoding="UTF-8" errorPage="ResultError.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>안녕하세요</p>
-	<p>
-		<%
-			out.println(str1 + "입니다.");
-		%>
-	</p>
-	
+	<% 
+	String []a = new String[3];
+	a[3]="1234";
+	%>
+
 </body>
 </html>
