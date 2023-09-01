@@ -6,7 +6,7 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"> <!-- 부트스트랩의 css를 가져옴, body태그 안에 있는 class들은 부트스트랩 안 class의 기능들을 가져온것임 -->
 <meta charset="UTF-8">
 <title>Welcome</title>
 </head>
@@ -22,7 +22,7 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3"><%=greeting%></h1>
-			<!-- "display-3" 클래스는 큰 제목에 적용되는 스타일 -->
+			
 		</div>
 	</div>
 	<div class="container">
