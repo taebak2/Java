@@ -28,7 +28,8 @@
 			hour = hour - 12;
 		}
 		var time = ampm + " " + hour + ":" + minute + ":" + second;
-		$("#clock").text(time);
+		$("#clock").text(time); // id가 "clock"인 요소의 텍스트 내용을 time 변수의 값으로 설정하는 코드
+
 	}
 	getClock();
 	setInterval(getClock,1000);
