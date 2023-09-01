@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href=".welcome.jsp">홈</a>
-			</div>
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href=".welcome.jsp">홈</a>
 		</div>
-	</nav>
+	</div>
+</nav>

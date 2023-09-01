@@ -10,6 +10,30 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Welcome</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		function getClock(){
+		var date = new Date();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+		var second = date.getSeconds();
+		var ampm;
+		if(hour==12){
+			ampm="오후";
+		} else if (hour<12){
+			ampm="오전";
+		} else {
+			ampm="오후";
+			hour = hour - 12;
+		}
+		var time = ampm + " " + hour + ":" + minute + ":" + second;
+		$("#clock").text(time);
+	}
+	getClock();
+	setInterval(getClock,1000);
+	});
+</script>
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
@@ -19,29 +43,14 @@
 			<!-- "display-3" 클래스는 큰 제목에 적용되는 스타일 -->
 		</div>
 	</div>
+
 	<div class="container">
 		<div class="text-center">
 			<h3>
 				<%=tagline%>
 			</h3>
-			<%
-				Date today = new Date();
-			String am_pm;
-			int hour = today.getHours();
-			int minute = today.getMinutes();
-			int second = today.getSeconds();
-
-			if (hour / 12 == 0) {
-				am_pm = "오전";
-			} else {
-				am_pm = "오후";
-				hour = hour - 12;
-			}
-			String today2 = am_pm + " " + hour + ":" + second;
-			out.print("현재 접속 시간 : " + today2);
-			%>
+			<h3 id="clock"></h3>
 		</div>
-	</div>
-	<%@ include file="footer.jsp"%>
+	</div><%@ include file="footer.jsp"%>
 </body>
 </html>
