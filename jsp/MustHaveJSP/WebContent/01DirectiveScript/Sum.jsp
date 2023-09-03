@@ -8,7 +8,7 @@ int sum = 0;	// %!는 변수 선언
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sum</title>
 </head>
 <body>
 <%
