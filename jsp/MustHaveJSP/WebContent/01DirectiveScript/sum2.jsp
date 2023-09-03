@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>sum2</title>
 </head>
 <body>
 	<%	// <%: 스크립틀릿(자바 코드), <%-- : 출력 표현식 
