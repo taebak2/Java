@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>request</title>
 </head>
 <body>
 	<form action="process.jsp" method="post">
