@@ -30,9 +30,14 @@
 			%>
 
 			<div class="col-md-4">
-				<h3><%=product.getPname()%></h3>
-				<h3><%=product.getDescription()%></h3>
-				<h3><%=product.getUnitPrice()%></h3>
+				<img src="resources/images/<%=product.getProductId()%>.JPG" style="width:100%">
+				<h3 id="a"><%=product.getPname()%></h3>
+				<h3 id="b"><%=product.getDescription()%></h3>
+				<h3 id="c"><%=product.getUnitPrice()%></h3>
+				<p>
+					<a href="product.jsp?id=<%=product.getProductId()%>"
+					class="btn btn-secondary" role="button">상세 정보</a>
+				</p>
 			</div>
 			<%
 				}
