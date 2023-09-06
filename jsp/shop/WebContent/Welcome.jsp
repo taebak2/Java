@@ -10,7 +10,8 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Welcome</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
 	$(function() {
 		function getClock(){
@@ -28,9 +29,8 @@
 			hour = hour - 12;
 		}
 		var time = ampm + " " + hour + ":" + minute + ":" + second;
-		$("#clock").text(time); // id가 "clock"인 요소의 텍스트 내용을 time 변수의 값으로 설정하는 코드
-
-	}
+		$("#clock").text(time); 	
+		}
 	getClock();
 	setInterval(getClock,1000);
 	});
