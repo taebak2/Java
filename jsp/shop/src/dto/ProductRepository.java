@@ -1,10 +1,16 @@
 package dto;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 
 public class ProductRepository {
 
 	private ArrayList<Product> listOfProducts = new ArrayList();
+	private static ProductRepository instance = new ProductRepository();
+	
+	public static ProductRepository getInstance() {
+		return instance;
+	}
 	
 	public ProductRepository() {
 		
@@ -47,8 +53,11 @@ public class ProductRepository {
 				break;
 			}
 		}
-		
 		return productById;
 	}
+	
+public void addProduct(Product product) {
+	listOfProducts.add(product);
+} 
 	
 }

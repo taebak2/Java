@@ -15,6 +15,8 @@ public class Product implements Serializable {
 	private long unitsInStock; // 상품 재고 개수
 	private String condition; // 상품 상태 (신상,중고,재생)
 	
+	public Product() {}
+	
 	public Product(String productId) {
 		super(); //  부모 클래스의 기본 생성자(default constructor)를 호출
 	}
