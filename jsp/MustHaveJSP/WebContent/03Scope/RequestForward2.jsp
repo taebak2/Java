@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%!
-int sum = 0;	// %!는 변수 선언  
-%>
+<%@page import="common.Person"%>
 
 <!DOCTYPE html>
 <html>
@@ -11,12 +9,12 @@ int sum = 0;	// %!는 변수 선언
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	for(int i=1; i<=100; i++){
-		sum+=i;
-}
-	out.println("합계는 : " + sum);
+	<%
+		Person value = (Person)(request.getAttribute("requestPerson"));
+	%>
+	<ul>
+		<li>Person 객체 값 : <%=value.getName()%></li>
+	</ul>
 
-%>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hello</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<p>안녕하세요</p>

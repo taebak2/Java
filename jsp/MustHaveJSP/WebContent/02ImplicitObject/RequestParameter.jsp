@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-		request.setCharacterEncoding("utf-8"); // 한글 처리
+	request.setCharacterEncoding("utf-8"); // 한글 처리
 	String id = request.getParameter("id");
 	String gender = request.getParameter("gender");
 	String[] favo = request.getParameterValues("favo"); 

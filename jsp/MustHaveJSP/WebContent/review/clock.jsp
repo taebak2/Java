@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>clock</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<%

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Error500</title>
+<title>Insert title here</title>
 </head>
 <body>
 <%

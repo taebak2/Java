@@ -16,7 +16,7 @@
 <body>
 	<h2> page 영역의 속성값 읽기 </h2>
 	<%
-		int pInteger = (Integer)pageContext.getAttribute("pageInteger");
+		int pInteger = (Integer)pageContext.getAttribute("pageInteger"); // 
 		String pString = pageContext.getAttribute("pageString").toString();
 		Person nPerson = (Person)(pageContext.getAttribute("pagePerson"));	
 		%>
@@ -26,7 +26,7 @@
 		<h1><%=nPerson.getName()%></h1>
 		
 		<h2> include된 파일에서 page 영역 읽어오기 </h2>
-		<%@ include file="PageInclude.jsp" %>
+		<%@ include file="PageInclude.jsp" %> 
 		
 		<h2> * 페이지 이동 후 page 영역 불러오기 * </h2>
 		<a href="PageLocation.jsp">페이지 로케이션 불러오기</a>
