@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-	request.setCharacterEncoding("utf-8");
+	request.setCharacterEncoding("utf-8"); // 성별, 취미는 한글이라서 encoding을 해줘야함
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String name = request.getParameter("name");
