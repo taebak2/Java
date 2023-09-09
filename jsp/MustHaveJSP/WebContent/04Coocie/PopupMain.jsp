@@ -19,7 +19,7 @@ if (cookies != null) {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>PopupMain</title>
 <link rel="stylesheet" href="css/cookie.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
