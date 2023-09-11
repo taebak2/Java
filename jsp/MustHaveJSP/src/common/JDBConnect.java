@@ -47,7 +47,7 @@ public class JDBConnect {
 	
 	public void close() {
 		try {
-			if (rs != null) rs.close();		// 결과 집합(ResultSet)을 닫음
+			if (rs != null) rs.close();	// 결과 집합(ResultSet)을 닫음
 			if (stmt != null) stmt.close();	// 명령문(Statement 또는 PreparedStatement)을 닫음
 			if (con != null) con.close();	// 데이터베이스 연결(Connection)을 닫음
 			System.out.println("자원 해제");
