@@ -26,7 +26,7 @@
 	%>
 	<h2> JDBC 테스트3</h2>
 	<%
-		String driver2 = application.getInitParameter("MysqlDriver"); // web에서 끌어오는 메서드 
+		String driver2 = application.getInitParameter("MysqlDriver"); 
 		String url2 = application.getInitParameter("MysqlURL");
 		String id2 = application.getInitParameter("MysqlId");
 		String pwd2 = application.getInitParameter("MysqlPwd");
