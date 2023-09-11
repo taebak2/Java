@@ -27,7 +27,7 @@
 		
 		int inResult = psmt.executeUpdate();
 		out.print(inResult + "행이 추가되었습니다.");
-		// update의 실행 결과는 숫자가 나옴 ( 몇 줄이 바뀌었는지 )
+		// update의 실행 결과는 숫자가 나옴 (몇 줄이 바뀌었는지)
 		jdbc.close();
 	%>
 </body>
