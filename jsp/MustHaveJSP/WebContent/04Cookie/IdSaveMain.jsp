@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
     <%
     	String loginId = CookieManager.readCookie(request, "loginId");
-    	String cookieCheck ="";
+    	String cookieCheck ="";		// 초기화
 
     	if(!loginId.equals("")){
     		cookieCheck="checked";
