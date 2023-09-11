@@ -11,5 +11,4 @@ show tables;
 
 select * from board;
 
-
 select count(*) from board;
