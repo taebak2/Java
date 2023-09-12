@@ -1,0 +1,7 @@
+@charset "UTF-8";
+#all{margin: 0 auto;
+	border: 3px solid lightgreen;
+	width: 600px;
+	height: 330px;
+ }
+#a{text-align: center;}
