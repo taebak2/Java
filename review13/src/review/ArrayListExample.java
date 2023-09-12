@@ -8,16 +8,16 @@ public class ArrayListExample {
 
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<>();
-		list.add("ÀÚ¹Ù");
+		list.add("ìë°”");
 		list.add("jsp");
 		list.add("html");
 		
 		int size = list.size();
 		System.out.println(size);
 		
-		String str2="";	// ¹®ÀÚ¿­ ÃÊ±âÈ­
-		for(String str : list) {	// list´Â ¼øÈ¸ÇÏ·Á´Â ¹®ÀÚ¿­ ¸ñ·Ï, 
-			str2 += str + " ";		// str2´Â °¢ ¿ä¼Ò°¡ °áÇÕµÇ´Â ¹®ÀÚ¿­
+		String str2="";	// ë¬¸ìì—´ ì´ˆê¸°í™”
+		for(String str : list) {	// listëŠ” ìˆœíšŒí•˜ë ¤ëŠ” ë¬¸ìì—´ ëª©ë¡, 
+			str2 += str + " ";	// str2ëŠ” ê° ìš”ì†Œê°€ ê²°í•©ë˜ëŠ” ë¬¸ìì—´
 		}
 		System.out.println(str2);
 		
@@ -26,19 +26,19 @@ public class ArrayListExample {
 		v.add(7);
 		v.add(-3);
 		
-		v.add(2,40);	// 2¹øÂ° ¹æ¿¡ µé¾î°¡¸é -3ÀÌ 3¹øÂ° ¹æÀ¸·Î ¹Ğ¸°´Ù.
+		v.add(2,40);	// 2ë²ˆì§¸ ë°©ì— ë“¤ì–´ê°€ë©´ -3ì´ 3ë²ˆì§¸ ë°©ìœ¼ë¡œ ë°€ë¦°ë‹¤.
 		int size2 = v.size();
 		System.out.println(size2);
 		
-		// ¸ğµç ¼ıÀÚ Ãâ·Â 
-		// ¸ğµç ¼ıÀÚ ÇÕ°è Ãâ·Â
+		// ëª¨ë“  ìˆ«ì ì¶œë ¥ 
+		// ëª¨ë“  ìˆ«ì í•©ê³„ ì¶œë ¥
 		
 		for (int i = 0; i < size2; i++) {
 			System.out.println(v.get(i));
 		}
 		
 		int integer1 = 0;
-		for (Integer integer : v) {	// ¹İº¹ °¡´ÉÇÑ °´Ã¼¸¦ ¼øÈ¸ÇÏ¸é¼­ °¢ ¿ä¼Ò¿¡ Á¢±ÙÇÏ´Â JavaÀÇ ¹İº¹¹®
+		for (Integer integer : v) {	// ë°˜ë³µ ê°€ëŠ¥í•œ ê°ì²´ë¥¼ ìˆœíšŒí•˜ë©´ì„œ ê° ìš”ì†Œì— ì ‘ê·¼í•˜ëŠ” Javaì˜ ë°˜ë³µë¬¸
 			integer1 +=integer;
 		}
 		System.out.println(integer1);
