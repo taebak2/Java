@@ -25,10 +25,9 @@
 		psmt.setString(2, pass);
 		psmt.setString(3, name);
 		
-		int inResult = psmt.executeUpdate(); 
+		int inResult = psmt.executeUpdate();
 		out.print(inResult + "행이 추가되었습니다.");
-		// executeUpdate(); 데이터베이스의 레코드를 추가, 수정 또는 삭제할 때 사용
-		// update의 실행 결과는 숫자가 나옴 (몇 줄이 바뀌었는지)
+		// update의 실행 결과는 숫자가 나옴 ( 몇 줄이 바뀌었는지 )
 		jdbc.close();
 	%>
 </body>
