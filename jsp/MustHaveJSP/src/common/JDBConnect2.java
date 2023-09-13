@@ -16,7 +16,7 @@ public class JDBConnect2 {
 
 	public JDBConnect2() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver"); // Java에서 Oracle JDBC 드라이버 클래스를 로드하는 코드
+			Class.forName("com.mysql.jdbc.Driver"); // Java에서 mysql 드라이버 클래스를 로드하는 코드
 
 			// com.mysql.jdbc.Driver mysql 드라이버 이름
 
