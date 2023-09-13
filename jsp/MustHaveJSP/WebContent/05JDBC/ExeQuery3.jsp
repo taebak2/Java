@@ -19,26 +19,22 @@
 		ResultSet rs = null;
 		try
 		{
-		String url = "jdbc:mysql://localhost:3306/member";
+		String url = "jdbc:mysql://localhost:3306/member?useUnicode=true&characterEncoding=utf8";
 		String id = "manager";
 		String pw = "1234";
 		Class.forName("com.mysql.jdbc.Driver");
 		con = DriverManager.getConnection(url,id,pw);
-		String sql = "select * from member";
+		String sql = "select * from student where s_name like '홍%'";
 		stmt = con.createStatement();
 		rs = stmt.executeQuery(sql);
 		
 		while(rs.next()){
-		String id2 = rs.getString(1);	
-		String name = rs.getString(2);
-		String password = rs.getString(3);	
-		String passcheck = rs.getString(4);	
-		String num = rs.getString(5);	
-		String email = rs.getString(6);	
-		String text = rs.getString(7);	
-		String signpath = rs.getString(8);
+		String sname = rs.getString(1);
+		String s_id= rs.getString(2);	
+		String s_tel= rs.getString(3);	
+		String s_address = rs.getString(4);
 			
-		out.print(id+" "+name+" "+password+" "+passcheck+ " " + num + " "+ email + " " + text+ " " + signpath);
+		out.print(sname+" "+s_id+" "+s_tel+" "+s_address);
 		
 		}} catch(Exception e){
 			out.print("데이터베이스 연결이 실패했습니다.");

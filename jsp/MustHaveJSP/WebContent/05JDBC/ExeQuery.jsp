@@ -21,10 +21,9 @@
 			String pw = jdbc.rs.getString(2);
 			String name = jdbc.rs.getString(3);
 			java.sql.Date regidate = jdbc.rs.getDate(4);
-			
 			out.print(id+" "+ pw + " " + name+ " " + regidate+"<br>");
 		}
-		jdbc.close();
+			jdbc.close();
 	%>
 </body>
 </html>

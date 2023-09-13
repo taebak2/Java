@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2> JDBC 테스트</h2>
+	<h2> JDBC 테스트 </h2>
 	<%
 		JDBConnect jdbc1 = new JDBConnect();
 		jdbc1.close();	
@@ -24,7 +24,7 @@
 		JDBConnect jdbc2 = new JDBConnect(driver,url,id,pwd);
 		jdbc2.close();
 	%>
-	<h2> JDBC 테스트3</h2>
+	<h2> JDBC 테스트3 </h2>
 	<%
 		String driver2 = application.getInitParameter("MysqlDriver"); // web에서 끌어오는 메서드 
 		String url2 = application.getInitParameter("MysqlURL");
