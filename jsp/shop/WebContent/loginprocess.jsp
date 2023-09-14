@@ -44,8 +44,8 @@
 		
 		String result="";
 		if(dto.getId()!=null){	// dto 내에 데이터가 존재하면 
-			session.setAttribute("user_id", dto.getId());	// session으로 설정 (로그인 상태를 유지해야하기 때문에)
-			session.setAttribute("user_name", dto.getName());
+			session.setAttribute("user_id", dto.getId());	// session으로 설정 (로그인 상태를 유지해야하기 때문에), 다른 페이지에서 쓸 때 유용
+			session.setAttribute("user_name", dto.getName());	
 			result=dto.getName() + "님 환영합니다.";
 		}
 		else{
