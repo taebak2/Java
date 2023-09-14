@@ -10,12 +10,12 @@ public class JDBConnect {
 	public Connection con; 
 	public Statement stmt; 
 	public PreparedStatement psmt; 
-	public ResultSet rs; 
+	public ResultSet rs; // db의 모든 정보들을 담기 위한 클래스 
 
 	public JDBConnect() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver"); 
-			String url = "jdbc:mysql://localhost:3306/member"; 
+			String url = "jdbc:mysql://localhost:3306/member?useUnicode=true&characterEncoding=utf-8&useSSL=false"; 
 			String id = "manager"; // 사용자 계정 아이디
 			String pwd = "1234"; // 계정 비밀번호
 			con = DriverManager.getConnection(url, id, pwd); // Java에서 JDBC를 사용하여 데이터베이스와의 연결을 설정하는 코드
