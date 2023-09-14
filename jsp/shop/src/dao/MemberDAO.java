@@ -49,7 +49,7 @@ public class MemberDAO extends JDBConnect {
 			psmt=con.prepareStatement(query1);
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();	// rs에 select문으로 지정한 query1의 데이터가 모두 출력 (return값 object)
-										// executeUpdate(); insert한 데이터들이 업데이트 (return값 int)
+							// executeUpdate(); insert한 데이터 업데이트 (return값 int)
 			if(rs.next()) {
 				String password2 = rs.getString(3);
 				if(pw.equals(password2)) {
