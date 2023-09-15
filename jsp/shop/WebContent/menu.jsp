@@ -22,17 +22,21 @@
 						out.print("<a class='navbar-brand' href='products.jsp'>");
 						out.print("상품목록");
 						out.print("</a>");
+
 					} else {    
 						out.print("<a class='navbar-brand' href='logout.jsp'>");
 						out.print("로그아웃");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='editmember.jsp'>");
-						out.print("회원 정보수정");
+						out.print("회원수정");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='deletemember.jsp'>");
 						out.print("회원탈퇴");
 						out.print("<a class='navbar-brand' href='products.jsp'>");
 						out.print("상품목록");
+						out.print("</a>");
+						out.print("<a class='navbar-brand' href='addProduct.jsp'>");
+						out.print("상품추가");
 						out.print("</a>");
 					}
 				%>
