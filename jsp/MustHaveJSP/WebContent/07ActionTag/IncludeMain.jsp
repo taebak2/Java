@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Include Main</title>
 </head>
 <body>
 	<h2> 지시어로 페이지 포함하기 </h2>
