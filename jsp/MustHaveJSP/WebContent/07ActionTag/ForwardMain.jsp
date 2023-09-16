@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Forward Main</title>
 </head>
 <body>
 	<h2> 액션 태그를 이용한 포워딩 </h2>
