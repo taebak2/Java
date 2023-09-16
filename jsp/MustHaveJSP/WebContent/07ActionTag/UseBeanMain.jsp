@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>UseBeanMain</title>
 </head>
 <body>
 	<h2> 유즈빈 액션태그 </h2>
