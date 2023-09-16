@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Forward Sub</title>
 </head>
 <body>
 	<h2> 포워드 결과 </h2>
