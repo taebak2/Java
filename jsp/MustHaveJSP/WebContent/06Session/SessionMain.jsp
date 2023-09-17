@@ -14,7 +14,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SessionMain</title>
 </head>
 <body>
 	<h2> 세션 설정 확인</h2>
