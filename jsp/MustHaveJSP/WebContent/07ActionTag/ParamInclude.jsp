@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ParamInclude</title>
 </head>
 <body>
 <h2>인클루드된 페이지에서 매개변수 확인</h2>
