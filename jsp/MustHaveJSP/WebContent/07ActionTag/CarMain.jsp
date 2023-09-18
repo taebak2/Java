@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CarMain</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<%
@@ -15,9 +15,11 @@
 
 
 	<jsp:useBean id="Car" class="common.Car" scope="request" />
-	<jsp:setProperty property="carName" value="<%=name %>" name="Car" />
-	<jsp:setProperty property="carColor" value="<%=color %>" name="Car" />
-	<jsp:setProperty property="carPrice" value="<%=price %>" name="Car" />
+	<jsp:setProperty property="carName" value="<%=name%>" name="Car" />
+	<jsp:setProperty property="carColor" value="<%=color%>" name="Car" />
+	<jsp:setProperty property="carPrice" value="<%=price%>" name="Car" />
+	
+	
 	<ul>
 		<li>자동차 이름 : <jsp:getProperty property="carName" name="Car" /></li>
 		<li>자동차 가격 : <jsp:getProperty property="carPrice" name="Car" /></li>
