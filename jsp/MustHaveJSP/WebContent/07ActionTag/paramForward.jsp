@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>paramForward</title>
 </head>
 <body>
 	<jsp:useBean id="person" class="common.Person" scope="request"/>
