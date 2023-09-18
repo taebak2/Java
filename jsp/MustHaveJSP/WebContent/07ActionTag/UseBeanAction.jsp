@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>UseBeanAction</title>
 </head>
 <body>
 	<h3>액션 태그로 폼값 한 번에 받기</h3>
