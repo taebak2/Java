@@ -5,20 +5,20 @@
 <%@ include file = "IsLoggedIn.jsp" %>
 
 <%
-	String num = request.getParameter("num");
-	String title = request.getParameter("title");
-	String content = request.getParameter("content");
+	String num = request.getParameter("num");		// 게시물 번호 
+	String title = request.getParameter("title");		// 제목
+	String content = request.getParameter("content");	// 내용
 	
-	BoardDTO dto = new BoardDTO();
+	BoardDTO dto = new BoardDTO();				// BoardDAO 클래스를 사용하여 게시물 번호에 해당하는 게시물 정보(BoardDTO)를 조회
 	BoardDAO dao = new BoardDAO(application);
 	dto = dao.selectView(num);
 	
-	String sessionId = session.getAttribute("UserId").toString();
+	String sessionId = session.getAttribute("UserId").toString(); // 현재 사용자의 세션에서 "UserId" 속성(로그인ID)을 가져와서 sessionId 변수에 저장
 	int delResult = 0;
 	if(sessionId.equals(dto.getId())) {
-		dto.setNum(num);
-		delResult = dao.deletePost(dto);
-		dao.close();
+		dto.setNum(num);			// 삭제할 게시물 번호 설정
+		delResult = dao.deletePost(dto);	// 게시물 삭제 및 결과값 받기 
+		dao.close();				// 데이터베이스 연결 닫기
 	}
 	
 	if(delResult == 1 ) {
