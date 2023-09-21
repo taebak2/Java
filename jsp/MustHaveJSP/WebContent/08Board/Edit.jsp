@@ -8,7 +8,7 @@
 <%
 	String num = request.getParameter("num");
 	BoardDAO dao = new BoardDAO(application);	// 오라클 DB 접속
-	BoardDTO dto = dao.selectView(num);			// 편집할 게시물 가져오기
+	BoardDTO dto = dao.selectView(num);		// 편집할 게시물 가져오기
 	String sessionId = (String)session.getAttribute("UserId");
 	
 	if(!sessionId.equals(dto.getId())){
