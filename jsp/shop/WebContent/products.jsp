@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
-<%@ page import="dto.ProductRepository"%>
+<%@ page import="dao.ProductRepository"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,8 @@
 		</div>
 	</div>
 	<%
-		ProductRepository dao = new ProductRepository().getInstance(); // dao 변수를 사용하여 ProductRepository 클래스의 메서드를 호출
+		ProductRepository dao = new ProductRepository(); // dao 변수를 사용하여 ProductRepository 클래스의 메서드를 호출
+		dao.selectProduct();
 		ArrayList<Product> listOfProducts = dao.getAllProducts(); 	//  listOfProducts에는 Product 클래스의 객체가 저장된 ArrayList가 포함
 	%>
 	<div class="container">
@@ -30,7 +31,7 @@
 			%>
 
 			<div class="col-md-4">
-				<img src="resources/images/<%=product.getProductId()%>.jpg" style="width:100%">
+				<img src="resources/images/<%=product.getProductId()%>.png" style="width:100%">
 				<h3 id="a"><%=product.getPname()%></h3>
 				<h3 id="b"><%=product.getDescription()%></h3>
 				<h3 id="c"><%=product.getUnitPrice()%></h3>

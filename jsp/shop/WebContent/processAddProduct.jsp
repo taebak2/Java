@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
-<%@ page import="dto.ProductRepository"%>
+<%@ page import="dao.ProductRepository"%>
 
 <%
 	request.setCharacterEncoding("utf-8");
@@ -14,8 +14,6 @@
 	long unitsInStock = Long.parseLong(request.getParameter("unitsInStock"));
 	String condition = request.getParameter("condition");
 
-	ProductRepository pr = new ProductRepository().getInstance(); 
-	// 클래스의 싱글톤 인스턴스를 생성하고, 이를 사용하여 제품을 저장하고 관리
 	
 	Product newProduct = new Product();
 	newProduct.setProductId(productId);
@@ -27,7 +25,7 @@
 	newProduct.setUnitsInStock(unitsInStock);
 	newProduct.setCondition(condition);
 	
-	pr.addProduct(newProduct); // 싱글톤 패턴으로 생성한 인스턴스인 pr을 통해 addProduct 메서드를 호출, 새 제품을 저장
+	 // 싱글톤 패턴으로 생성한 인스턴스인 pr을 통해 addProduct 메서드를 호출, 새 제품을 저장
 	response.sendRedirect("products.jsp"); //  "products.jsp" 페이지로 리다이렉트
 	
 %>

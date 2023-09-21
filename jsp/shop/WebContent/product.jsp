@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
-<%@ page import="dto.ProductRepository"%>
+<%@ page import="dao.ProductRepository"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,17 +19,17 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		ProductRepository dao = new ProductRepository().getInstance();
+		ProductRepository dao = new ProductRepository();
+		dao.selectProduct();
 		Product product = dao.getProductById(id);
 		// dao 객체를 사용하여 상품 ID를 기반으로 특정 상품 정보를 검색
 		// getProductById 메서드는 id 값을 사용하여 데이터베이스에서 상품 정보를 가져옴
 		// 검색된 상품 정보는 product 변수에 저장
-		
 	%>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-			<img src="resources/images/<%=product.getProductId()%>.jpg" style="width:100%">
+			<img src="resources/images/<%=product.getProductId()%>.png" style="width:100%">
 			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname()%></h3>
