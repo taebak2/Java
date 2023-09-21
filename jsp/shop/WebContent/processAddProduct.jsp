@@ -26,6 +26,6 @@
 	newProduct.setCondition(condition);
 	
 	 // 싱글톤 패턴으로 생성한 인스턴스인 pr을 통해 addProduct 메서드를 호출, 새 제품을 저장
-	response.sendRedirect("products.jsp"); //  "products.jsp" 페이지로 리다이렉트
+	response.sendRedirect("products.jsp"); 
 	
 %>
