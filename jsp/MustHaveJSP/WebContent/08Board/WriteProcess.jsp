@@ -19,8 +19,8 @@
 	dto.setTitle(title);
 	dto.setContent(content);
 	dto.setId(session.getAttribute("UserId").toString());	// board 테이블의 id칼럼은 member 테이블의 id컬럼과 Foreign key로 설정됐기 때문에 
-															// 만약 id가 null값이면 INSERT시에 제약조건 위배로 오류가 발생하기 때문에 
-															// session 영역의 id 역시 DTO에 담음
+								// 만약 id가 null값이면 INSERT시에 제약조건 위배로 오류가 발생하기 때문에 
+								// session 영역의 id 역시 DTO에 담음
 	// 2.폼값을 DTO 객체에 저장
 	
 	BoardDAO dao = new BoardDAO(application);	// DAO를 application으로 생성한 이유??
