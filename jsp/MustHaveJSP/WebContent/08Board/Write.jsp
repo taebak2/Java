@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file = "IsLoggedIn.jsp" %>
+<%@ include file = "IsLoggedIn.jsp"  %><%-- 글쓰기 페이지는 로그인을 해야 진입할 수 있기 때문에 IsLoggedIn.jsp 삽입 --%> 	
 <!DOCTYPE html>
 <html>
 <head>

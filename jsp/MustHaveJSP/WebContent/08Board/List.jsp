@@ -63,7 +63,7 @@ dao.close();
 		// 게시물 목록이 비어있을 때 처리 구문
 	%>
 	<tr>
-			<td colspan="3" align="center">
+			<td colspan="5" align="center">
 				게시글을 작성하세요
 			</td>
 	</tr>
@@ -75,7 +75,7 @@ dao.close();
 	<tr align="center">
 		<td><%=virtualNum%></td>
 		<td align="left">
-			<a href="#"><%=dto.getTitle() %></a>
+			<a href="View.jsp?num=<%=dto.getNum()%>"><%=dto.getTitle() %></a>	<!--# : 현재 페이지 내에서 어떤 동작을 수행하도록 하는 역할  -->
 			</td>
 		<td align="center"><%=dto.getId() %></td>
 		<td align="center"><%=dto.getVisitcount() %></td>
