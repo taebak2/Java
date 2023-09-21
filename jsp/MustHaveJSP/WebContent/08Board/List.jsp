@@ -6,13 +6,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-	BoardDAO dao = new BoardDAO(application); 				   // DB 연결
-	Map<String, Object> param = new HashMap<String, Object>(); // 검색 필드와 검색 단어를 저장하기 위한 맵(Map)을 생성
-															   // 이 맵은 검색 조건을 저장하는데 사용
+	BoardDAO dao = new BoardDAO(application); 			// DB 연결
+	Map<String, Object> param = new HashMap<String, Object>(); 	// 검색 필드와 검색 단어를 저장하기 위한 맵(Map)을 생성
+									// 이 맵은 검색 조건을 저장하는데 사용
 
-// 사용자가 입력한 검색필드와 검색단어를 저장함
 String searchField = request.getParameter("searchField");
 String searchWord = request.getParameter("searchWord");
+// 사용자가 입력한 검색필드와 검색단어를 저장함
 
 if (searchWord != null) {
 	param.put("searchField", searchField);
@@ -20,7 +20,7 @@ if (searchWord != null) {
 }
 // 만약 사용자가 검색 단어를 입력한 경우, param 맵에 검색 필드와 검색 단어를 저장
 
-int totalCount = dao.selectCount(param); 			// 전체 게시물 개수 저장
+int totalCount = dao.selectCount(param); 	    // 전체 게시물 개수 저장
 List<BoardDTO> boardLists = dao.selectList(param);  // 게시물 목록 받아서 저장
 dao.close();
 %>
@@ -68,7 +68,7 @@ dao.close();
 			</td>
 	</tr>
 	<% } else {
-		int virtualNum = 0;				// 가상 번호 생성 (DB num (X), 화면 상에서의 번호를 나타냄
+		int virtualNum = 0;			// 가상 번호 생성 (DB num (X), 화면 상에서의 번호를 나타냄
 		for(BoardDTO dto : boardLists){
 			virtualNum = totalCount --;	// 전체 게시물 수에서 시작해 1씩 감소
 	%>
