@@ -21,7 +21,8 @@
 	<%
 		ProductRepository dao = new ProductRepository(); // dao 변수를 사용하여 ProductRepository 클래스의 메서드를 호출
 		dao.selectProduct();
-		ArrayList<Product> listOfProducts = dao.getAllProducts(); 	//  listOfProducts에는 Product 클래스의 객체가 저장된 ArrayList가 포함
+		ArrayList<Product> listOfProducts = dao.getAllProducts(); 	//  listOfProducts에는 Product 클래스의 객체가 저장된 ArrayList가 포함	
+		dao.close();
 	%>
 	<div class="container">
 		<div class="row" align="center">
