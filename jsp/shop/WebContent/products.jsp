@@ -1,8 +1,10 @@
+<%@page import="common.JSFunction"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository"%>
+<%@ include file="LoginCheck.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +15,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
+	
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품목록</h1>
@@ -20,9 +23,8 @@
 	</div>
 	<%
 		ProductRepository dao = new ProductRepository(); // dao 변수를 사용하여 ProductRepository 클래스의 메서드를 호출
-		dao.selectProduct();
-		ArrayList<Product> listOfProducts = dao.getAllProducts(); 	//  listOfProducts에는 Product 클래스의 객체가 저장된 ArrayList가 포함	
-		dao.close();
+	dao.selectProduct();
+	ArrayList<Product> listOfProducts = dao.getAllProducts(); //  listOfProducts에는 Product 클래스의 객체가 저장된 ArrayList가 포함
 	%>
 	<div class="container">
 		<div class="row" align="center">
@@ -32,13 +34,14 @@
 			%>
 
 			<div class="col-md-4">
-				<img src="resources/images/<%=product.getProductId()%>.png" style="width:100%">
+				<img src="resources/images/<%=product.getProductId()%>.png"
+					style="width: 100%">
 				<h3 id="a"><%=product.getPname()%></h3>
 				<h3 id="b"><%=product.getDescription()%></h3>
 				<h3 id="c"><%=product.getUnitPrice()%></h3>
 				<p>
 					<a href="product.jsp?id=<%=product.getProductId()%>"
-					class="btn btn-secondary" role="button">상세 정보</a>
+						class="btn btn-secondary" role="button">상세 정보</a>
 				</p>
 			</div>
 			<%
@@ -46,6 +49,7 @@
 			%>
 		</div>
 	</div>
+	
 	<%@ include file="footer.jsp"%>
 </body>
 </html>

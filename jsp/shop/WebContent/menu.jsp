@@ -3,14 +3,15 @@
 <%
 	String user_id = (String) session.getAttribute("user_id");
 %>
-
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 
 <nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
 				<%
 					if(user_id==null) {
-						out.print("<a class='navbar-brand' href='welcome.jsp'>");
+						out.print("<a class='navbar-brand' href='.welcome.jsp'>");
 						out.print("홈");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='login.jsp'>");
@@ -19,10 +20,6 @@
 						out.print("<a class='navbar-brand' href='addMember.jsp'>");
 						out.print("회원가입");
 						out.print("</a>");
-						out.print("<a class='navbar-brand' href='products.jsp'>");
-						out.print("상품목록");
-						out.print("</a>");
-
 					} else {    
 						out.print("<a class='navbar-brand' href='logout.jsp'>");
 						out.print("로그아웃");
@@ -32,11 +29,15 @@
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='deletemember.jsp'>");
 						out.print("회원탈퇴");
+						out.print("</a>");
 						out.print("<a class='navbar-brand' href='products.jsp'>");
 						out.print("상품목록");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='addProduct.jsp'>");
 						out.print("상품추가");
+						out.print("</a>");
+						out.print("<a class='navbar-brand' href='deleteProduct.jsp'>");
+						out.print("상품삭제");
 						out.print("</a>");
 					}
 				%>

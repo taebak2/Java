@@ -12,6 +12,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
+	<%@ include file="LoginCheck.jsp"%>
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품 상세 정보</h1>
@@ -22,7 +23,6 @@
 		ProductRepository dao = new ProductRepository();
 		dao.selectProduct();
 		Product product = dao.getProductById(id);
-		dao.close();
 		// dao 객체를 사용하여 상품 ID를 기반으로 특정 상품 정보를 검색
 		// getProductById 메서드는 id 값을 사용하여 데이터베이스에서 상품 정보를 가져옴
 		// 검색된 상품 정보는 product 변수에 저장

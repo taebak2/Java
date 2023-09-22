@@ -1,3 +1,4 @@
+<%@page import="common.JSFunction"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
-
+	<%@ include file="LoginCheck.jsp"%>
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품 등록</h1>
@@ -19,7 +20,7 @@
 
 	<div class="container">
 		<form name="newProduct"
-			action="processAddProduct.jsp" class="form-horizontal" method="post">
+			action="processAddProcess.jsp" class="form-horizontal" method="post">
 			<div class="form-group row">
 				<label class="col-sm-2">상품코드</label>
 				<div class="col-sm-3">
