@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%
-		ProductRepository dao = new ProductRepository();
+	ProductRepository dao = new ProductRepository();
 	Product product = new Product();
 	product.setProductId(productId);
 	product.setPname(pname);
