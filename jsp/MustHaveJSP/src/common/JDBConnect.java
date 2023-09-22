@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import javax.servlet.ServletContext;
+
 public class JDBConnect {
 	public Connection con; // 데이터베이스 연결
 	public Statement stmt; // 정적 쿼리문
@@ -37,24 +39,42 @@ public class JDBConnect {
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, id, pwd);
 			System.out.println("2번째 연결 성공");
-			
+
 		} catch (Exception e) {
 			System.out.println("2번째 데이터베이스 연결 오류입니다.");
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
+	public JDBConnect(ServletContext application) {
+		try {
+			String driver = application.getInitParameter("OracleDriver");
+			Class.forName(driver);
+			String url = application.getInitParameter("OracleURL");
+			String id = application.getInitParameter("OracleId");
+			String pwd = application.getInitParameter("OraclePwd");
+			con = DriverManager.getConnection(url, id, pwd);
+			System.out.println("application db연결 성공");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("application db연결 실패");
+		}
+	}
+
 	public void close() {
 		try {
-			if (rs != null) rs.close();		// 결과 집합(ResultSet)을 닫음
-			if (stmt != null) stmt.close();	// 명령문(Statement 또는 PreparedStatement)을 닫음
-			if (con != null) con.close();	// 데이터베이스 연결(Connection)을 닫음
+			if (rs != null)
+				rs.close(); // 결과 집합(ResultSet)을 닫음
+			if (stmt != null)
+				stmt.close(); // 명령문(Statement 또는 PreparedStatement)을 닫음
+			if (con != null)
+				con.close(); // 데이터베이스 연결(Connection)을 닫음
 			System.out.println("자원 해제");
 		} catch (Exception e) {
-			
+
 			e.printStackTrace();
 		}
-
 	}
 }
