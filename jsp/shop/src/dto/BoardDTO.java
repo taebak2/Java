@@ -7,7 +7,8 @@ public class BoardDTO {
 	private String id;
 	private String postdate;
 	private int visitcount;
-	
+	private String name;
+
 	public String getNum() {
 		return num;
 	}
@@ -64,5 +65,4 @@ public class BoardDTO {
 		this.name = name;
 	}
 
-	private String name;
 }
