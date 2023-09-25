@@ -37,8 +37,8 @@ public class BoardDAO extends JDBConnect {
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(query);
-			
-			while(rs.next()) {
+
+			while (rs.next()) {
 				BoardDTO bto = new BoardDTO();
 				bto.setNum(rs.getString("num"));
 				bto.setTitle(rs.getString("title"));
@@ -55,11 +55,11 @@ public class BoardDAO extends JDBConnect {
 		}
 		return dto;
 	}
-	
+
 	// 글쓰기
 	public int insertWrite(BoardDTO dto) {
 		int result = 0;
-		
+
 		try {
 			String query = "insert into board(title,content,id,postdate,visitcount) values(?,?,?,?,0)";
 			psmt = con.prepareStatement(query);
@@ -75,4 +75,60 @@ public class BoardDAO extends JDBConnect {
 		return result;
 	}
 
+	// 세부내용 출력
+	public BoardDTO selectView(String num) {
+		BoardDTO dto = new BoardDTO();
+		String query = "select board.*, member.name from board "
+				+ "inner join member on board.id = member.id where num=?";
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, num);
+			rs = psmt.executeQuery();
+			if (rs.next()) {
+				dto.setNum(rs.getString("num"));
+				dto.setTitle(rs.getString("title"));
+				dto.setContent(rs.getString("content"));
+				dto.setId(rs.getString("id"));
+				dto.setPostdate(rs.getString("postdate"));
+				dto.setVisitcount(rs.getInt("visitcount"));
+				dto.setName(rs.getString("name"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("출력 오류");
+		}
+		return dto;
+	}
+
+	// 조회수 증가
+	public void updateVisitCount(String num) {
+		String query = "update board set visitcount = visitcount + 1 where num=?";
+
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, num);
+			rs = psmt.executeQuery();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("조회수 증가 오류");
+		}
+	}
+	
+	// 게시물 수정하기 
+	public int updateEdit(BoardDTO dto) {
+		int result = 0;
+		String query = "update board set title=?, content=? where num=?";
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getTitle());
+			psmt.setString(2, dto.getContent());
+			psmt.setString(3, dto.getNum());
+			result = psmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("게시물 수정 오류");
+		}
+		return result;
+	}
 }
