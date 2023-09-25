@@ -11,7 +11,7 @@
 			<div class="navbar-header">
 				<%
 					if(user_id==null) {
-						out.print("<a class='navbar-brand' href='.welcome.jsp'>");
+						out.print("<a class='navbar-brand' href='welcome.jsp'>");
 						out.print("홈");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='login.jsp'>");
@@ -29,6 +29,9 @@
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='deletemember.jsp'>");
 						out.print("회원탈퇴");
+						out.print("</a>");
+						out.print("<a class='navbar-brand' href='boardmain.jsp'>");
+						out.print("게시판");
 						out.print("</a>");
 						out.print("<a class='navbar-brand' href='products.jsp'>");
 						out.print("상품목록");
