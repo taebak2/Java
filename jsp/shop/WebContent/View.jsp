@@ -8,8 +8,8 @@
 BoardDAO dao = new BoardDAO(); // 파라미터값으로 name,content를 사용할 수 없는 이유는
 BoardDTO dto = new BoardDTO(); // boardmain.jsp에서 가져올 파라미터값이 존재하지 않기 때문
 
-dao.updateVisitCount(num); // String num은  dto.getNum()으로 바로 출력이 되는데  
-dto = dao.selectView(num); // 컨텐츠랑 이름은 왜 null값 나오는지..?
+dao.updateVisitCount(num);  
+dto = dao.selectView(num); 
 dao.close();
 
 // 게시물 조회수 증가 
