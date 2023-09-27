@@ -9,7 +9,7 @@
 String id = (String) session.getAttribute("user_id"); // 현재 로그인한 아이디
 
 BoardDAO dao = new BoardDAO();
-BoardDTO dto = dao.selectView(num);
+BoardDTO dto = dao.selectView(num);	// selectView 메서드 
 String id2 = dto.getId(); // 글 작성한 아이디 
 
 if (id.equals(id2)) { // 로그인 아이디와 글작성 아이디가 일치하면 
