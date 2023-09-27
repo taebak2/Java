@@ -59,4 +59,27 @@ public class MemberShipDAO extends JDBConnect {
 
 		return result;
 	}
+
+	public int deleteMember(String id, String pw) {
+		
+		int result =0;
+		String query ="delete from membership where memberid=? and memberpw=?";
+		
+		try {
+			
+			psmt =con.prepareStatement(query);
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
+			
+			
+			result =psmt.executeUpdate();
+			
+			
+			System.out.println("회원삭제성공");
+		} catch (Exception e) {
+			System.out.println("회원삭제실패"+e.getMessage());
+			e.printStackTrace();
+		}
+		return result;
+	}
 }
