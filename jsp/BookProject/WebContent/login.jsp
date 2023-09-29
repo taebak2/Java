@@ -1,4 +1,4 @@
-<%@page import="common.JSFunction"%>
+ŵ<%@page import="common.JSFunction"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 <head>
 <%@include file="top.jsp" %>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>login</title>
 </head>
 <body>
 	
