@@ -9,7 +9,7 @@
 <head>
 <%@include file="top.jsp" %>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>bookmain</title>
 <style>
 table,tr,td{
 	border: 1px solid black;
