@@ -6,7 +6,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>addMember</title>
 </head>
 <body>
 	<%
