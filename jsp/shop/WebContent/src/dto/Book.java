@@ -7,7 +7,7 @@ public class Book {
 	private String author; // 저자
 	private String description; // 도서 설명
 	public Book() {
-		
+		  
 	}
 	public String getBookId() {
 		return bookId;
