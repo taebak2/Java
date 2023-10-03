@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository"%>
-
+ 
 <%
 	request.setCharacterEncoding("utf-8");
 	String productId = request.getParameter("productId");
