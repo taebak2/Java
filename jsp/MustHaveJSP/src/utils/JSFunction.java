@@ -15,5 +15,17 @@ public class JSFunction {
 		} catch (Exception e) {
 		}
 	}
-	// JSP 페이지나 서블릿에서 JSFunction.alertLocation(msg, url, out);와 같은 형태로 호출해야 JSFunction 클래스를 사용할 수 있음 
+	// JSP 페이지나 서블릿에서 JSFunction.alertLocation(msg, url, out);와 같은 형태로 호출해야 JSFunction 클래스를 사용할 수 있음
+	
+	public static void alertBack(String msg, JspWriter out) {
+		try {
+			String script = ""
+					+ "<script>"
+					+ " alert('" + msg +"');"
+					+ "history.back();"	// 브라우저의 이전 페이지로 이동하는 JavaScript 코드
+					+ "</script>";
+			out.println(script);
+		} catch (Exception e) {
+		}
+	}
 } 
