@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>WriteProcess</title>
 </head>
 <body>
 	<%
@@ -23,13 +23,20 @@
 	String postdate = curdateformat.format(new Date());
 
 	BoardDTO dto = new BoardDTO();
-	dto.setTitle(title);
+	// dto.setTitle(title);
 	dto.setContent(content);
 	dto.setId((String) session.getAttribute("user_id"));	// loginProcess.jsp에서 가져옴
 	dto.setPostdate(postdate);
 
 	BoardDAO dao = new BoardDAO();
-	int result = dao.insertWrite(dto);	// dto에서 setting한 값들을 insertWrite  메서드에 집어넣음
+	// int result = dao.insertWrite(dto);	// dto에서 setting한 값들을 insertWrite 메서드에 집어넣음
+	
+	int result = 0;
+	for(int i=1; i<=1000; i++){
+		dto.setTitle(title+"-"+i);
+		result = dao.insertWrite(dto);
+	}
+	
 	dao.close();
 	
 

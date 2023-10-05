@@ -9,7 +9,7 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 <meta charset="UTF-8">
-<title>boardmain</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<%@ include file="menu.jsp"%>
@@ -26,7 +26,7 @@
 	</div>
 	<div class="container">
 		<table border="1" width="100%">
-			<tr>
+			<tr align="center">
 				<th width="10%">번호</th>
 				<th width="50%">제목</th>
 				<th width="15%">아이디</th>
