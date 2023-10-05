@@ -1,19 +1,20 @@
 package dto;
 
 public class BoardDTO {
-	private String num;
+	private int num;
 	private String title;
 	private String content;
 	private String id;
 	private String postdate;
 	private int visitcount;
 	private String name;
+	
 
-	public String getNum() {
+	public int getNum() {
 		return num;
 	}
 
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 
@@ -64,5 +65,8 @@ public class BoardDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	
+	
+	
 }
