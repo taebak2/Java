@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Set1</title>
 </head>
 <body>
 	<c:set var="directVar" value="100"/>
