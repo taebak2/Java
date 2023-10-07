@@ -8,7 +8,7 @@
 </head>
 <body>
 	<table border="1" width="90%">
-	<tr>
+	<tr> 
 	<td align="center">
 		<% if (session.getAttribute("UserId")==null) { %>
 			<a href="../06Session/LoginForm.jsp">로그인</a>
