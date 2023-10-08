@@ -2,7 +2,7 @@
 <%@page import="dto.BoardDTO"%>
 <%@page import="dao.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>   
 
 <%
 	String num = request.getParameter("num"); // 삭제할 게시물 번호
