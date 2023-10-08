@@ -11,7 +11,7 @@ String id2 = (String) session.getAttribute("user_id");
 String num = request.getParameter("num");
 String title = request.getParameter("title");
 String content = request.getParameter("content");
-
+   
 if (id.equals(id2)) {
 	BoardDTO dto = new BoardDTO();
 	dto.setNum(num);
