@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <title>addmemberprocess</title>
 </head>
-<body>
+<body>   
 	<%
 	request.setCharacterEncoding("utf-8");
 	String id = request.getParameter("id");
