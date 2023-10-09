@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%
+<%    
 	String num = request.getParameter("num"); // boardmain.jsp에서 넘어온 num
 BoardDAO dao = new BoardDAO(); // 파라미터값으로 name,content를 사용할 수 없는 이유는
 BoardDTO dto = new BoardDTO(); // boardmain.jsp에서 가져올 파라미터값이 존재하지 않기 때문
