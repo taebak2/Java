@@ -4,6 +4,6 @@
 <%
 	if (session.getAttribute("user_id") == null) {
 		JSFunction.alertLocation("로그인 후 이용하세요", "login.jsp", out);
-		return;
+		return;   
 	}
 %>
