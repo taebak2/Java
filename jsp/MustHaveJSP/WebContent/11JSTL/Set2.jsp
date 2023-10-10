@@ -13,14 +13,14 @@
 <body>
 	<h3> 리스트 컬렉션 이용하기 </h3>	
 	<%
-		ArrayList<Person> pList = new ArrayList<>();
-		pList.add(new Person("성삼문",55));
+		ArrayList<Person> pList = new ArrayList<>();	// List 컬렉션 생성
+		pList.add(new Person("성삼문",55));		// Person 객체 추가
 		pList.add(new Person("박팽년",60));
 	%>
-	<c:set var="personList" value="<%=pList %>" scope="request"/>
+	<c:set var="personList" value="<%=pList %>" scope="request"/>	// request영역에 var = personList로 저장
 	<ul>
 		<li>이름 : ${personList[0].name } </li>
-		<li>나이 : ${personList[1].age } </li>
+		<li>나이 : ${personList[1].age } </li>	// 똑같은 이름으로 저장한 속성이 없으므로 requestScope 생략 가능 
 	</ul>
 	
 	<h3> 맵 컬렉션 이용하기 </h3>
