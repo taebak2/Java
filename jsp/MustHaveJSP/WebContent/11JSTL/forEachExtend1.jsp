@@ -12,9 +12,9 @@
 <%
 	String[] rgba = {"red","green","blue","black"};
 %>
-	<c:forEach items="<%=rgba%>" var="c">	<!-- 향상된 for문 -->
-		<span style="color: ${c};">${c}</span> <!-- 향상된 for문 vs 일반 for문 index, count 차이...?-->
-	</c:forEach>
+	<c:forEach items="<%=rgba%>" var="c">		<!-- 향상된 for문 -->
+		<span style="color: ${c};">${c}</span> <!-- 향상된 for문 : index, count가 무조건 0부터 시작 -->
+	</c:forEach>								<!-- 일반 for문 index, count start ~ end-->
 	
 	<h3> varStatus 속성 보기 </h3>
 	<c:forEach items="<%=rgba%>" var="c" varStatus="s">
