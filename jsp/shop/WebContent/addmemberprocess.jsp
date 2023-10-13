@@ -1,57 +1,74 @@
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.io.File"%>
+<%@page import="dto.MemberDTO"%>
+<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@page import="dao.MemberDAO"%>
+<%@page import="java.sql.*"%>
+<%@page import="common.JDBConnect"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	String saveDirecory = application.getRealPath("/Uploads");	// 실제 저장 폴더
+	int maxPostSize = 5 * 1024 * 1024;	// 파일 최대 용량 5MB
+	String encoding = "utf-8";
+	
+	MultipartRequest mr = new MultipartRequest(request, saveDirecory, maxPostSize, encoding, new DefaultFileRenamePolicy());	
+	
+	String id = mr.getParameter("id");
+	String password = mr.getParameter("password");
+	String name = mr.getParameter("name");		
+	String phone = mr.getParameter("phone");		
+	String address = mr.getParameter("address");		
+	String photoimage = mr.getFilesystemName("photoImage");	// 그림 파일에서 이름만 가져오는 메서드
+	
+	File photoFile = new File(saveDirecory+File.separator + photoimage);	// ????
+	
+	MemberDAO dao = new MemberDAO();
+		
+	String sql = "select * from member";
+	PreparedStatement psmt = dao.con.prepareStatement(sql);
+	ResultSet rs = psmt.executeQuery();
+	
+	String result="";
+	while(rs.next()) {
+		String id2 = rs.getString(1);
+				
+		if(id.equals(id2)) {
+			result="기존회원";		
+			request.getRequestDispatcher("addmember.jsp?error=1").forward(request,response);
+			break;
+		} 
+	}
+	if(result==""){
+		
+	dao.insertMember(id, name, password, phone, address, photoimage);
+	dao.close();
+	}
+	
+
+%>    
+    
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
 <meta charset="UTF-8">
-<title>addmemberprocess</title>
+<title>Insert title here</title>
 </head>
-<body>   
-	<%
-	request.setCharacterEncoding("utf-8");
-	String id = request.getParameter("id");
-	String password = request.getParameter("password");
-	String name = request.getParameter("name");
-	String num = request.getParameter("num");
-	String ads = request.getParameter("address");
-
-	MemberDAO dao = new MemberDAO();
-
-	String sql = "select * from member";
-	PreparedStatement psmt = dao.con.prepareStatement(sql);
-	ResultSet rs = psmt.executeQuery();	// ResultSet을 사용하는 이유는 select 문은 결과창이 나오기 때문에
-										// ex) insert문은 결과창을 따로 보여주지 않기 때문에 update만 해도됨
-
-	String result = "";
-	while (rs.next()) {
-		String id2 = rs.getString(1);
-
-		if (id.equals(id2)) {
-			result = "기존회원";
-			request.getRequestDispatcher("addmember.jsp?error=1").forward(request, response);
-			break;
-		}
-	}
-
-	dao.addMember(id, name, password, num, ads);
-	result = "환영합니다";
-	dao.close();
-	%>
-	
+<body>
 	<jsp:include page="menu.jsp" />
+	
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">회원 가입</h1>
 		</div>
 	</div>
+	
 	<div class="container">
-	<h1 class="display-5"><%=result %></h1>
+			<h1 class="display-5"><%=name%>님 회원가입을 환영합니다!!</h1>
 	</div>
-	<%@ include file="footer.jsp" %>
 </body>
 </html>
