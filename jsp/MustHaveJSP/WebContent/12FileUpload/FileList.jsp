@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FileList</title>
 </head>
 <body>
 	<h2> 데이터베이스에 등록된 파일 목록 보기 </h2>
