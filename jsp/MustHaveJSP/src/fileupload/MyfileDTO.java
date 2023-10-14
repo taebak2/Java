@@ -2,7 +2,7 @@ package fileupload;
 
 public class MyfileDTO {
 	
-	private String idx;		// 파일번호
+	private String idx;	// 파일번호
 	private String name;	// 작성자 이름
 	private String title;	// 제목
 	private String cate; 	// 카테고리
