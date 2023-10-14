@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FileUploadMain</title>
 </head>
 <body>
 	<h3> 파일 업로드 </h3>
