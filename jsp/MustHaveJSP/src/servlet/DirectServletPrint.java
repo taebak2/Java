@@ -9,14 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
 public class DirectServletPrint extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/html;charset=utf-8");	//  응답의 컨텐츠 타입과 문자 인코딩을 설정
-		PrintWriter writer = response.getWriter();			// jsp에서 자바 text 사용할 때 쓰는 객체
+		response.setContentType("text/html;charset=utf-8");	// 응답의 컨텐츠 타입과 문자 인코딩을 설정
+		PrintWriter writer = response.getWriter();		// jsp에서 자바 text 사용할 때 쓰는 객체
 		
 		writer.println("<html>");
 		writer.println("<body>");
