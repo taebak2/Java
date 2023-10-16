@@ -4,10 +4,10 @@
 	pageEncoding="UTF-8"%>
 <%
 	String id = (String) session.getAttribute("user_id");
-String pw = (String) session.getAttribute("user_pw");
-MemberDAO dao = new MemberDAO();
-MemberDTO dto = dao.getMemberDTO(id, pw);
-dao.close();
+	String pw = (String) session.getAttribute("user_pw");
+	MemberDAO dao = new MemberDAO();
+	MemberDTO dto = dao.getMemberDTO(id, pw);
+	dao.close();
 %>
 <!DOCTYPE html>
 <html>

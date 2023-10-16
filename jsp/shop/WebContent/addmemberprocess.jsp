@@ -10,11 +10,11 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	
-	String saveDirecory = application.getRealPath("/Uploads");	// 실제 저장 폴더
+	String saveDirectory = application.getRealPath("/Uploads");	// 실제 저장 폴더
 	int maxPostSize = 5 * 1024 * 1024;	// 파일 최대 용량 5MB
 	String encoding = "utf-8";
 	
-	MultipartRequest mr = new MultipartRequest(request, saveDirecory, maxPostSize, encoding, new DefaultFileRenamePolicy());	
+	MultipartRequest mr = new MultipartRequest(request, saveDirectory, maxPostSize, encoding, new DefaultFileRenamePolicy());	
 	
 	String id = mr.getParameter("id");
 	String password = mr.getParameter("password");
@@ -23,7 +23,7 @@
 	String address = mr.getParameter("address");		
 	String photoimage = mr.getFilesystemName("photoImage");	// 그림 파일에서 이름만 가져오는 메서드
 	
-	File photoFile = new File(saveDirecory+File.separator + photoimage);	// ????
+	File photoFile = new File(saveDirectory + File.separator + photoimage);	// ????
 	
 	MemberDAO dao = new MemberDAO();
 		
