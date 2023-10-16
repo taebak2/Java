@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FileList</title>
 </head>
 <body>
 	<h2> 데이터베이스에 등록된 파일 목록 보기 </h2>
@@ -44,6 +44,7 @@
 			<!-- 각 파일 정보를 HTML <td> 요소에 출력 -->
 			<td>a<a href="Download.jsp?oName=<%=URLEncoder.encode(f.getOfile(),"UTF-8")%>&sName=<%=URLEncoder.encode(f.getSfile(),"UTF-8")%>">[다운로드]
 		</a></td>
+
 		<!-- 파일 다운로드 링크를 생성
 		Download.jsp 페이지로 이동하면서 다운로드할 파일의 원본 이름과 저장된 이름을 전달
 		f.getOfile()는 파일의 원본 이름을 가져오고, f.getSfile()는 저장된 파일 이름을 가져옴 
