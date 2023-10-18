@@ -21,7 +21,8 @@ public class BoardDAO extends JDBConnect {
 
 		if (map.get("searchWord") != null) { // 검색하는 단어가 있다면
 			// searchField = 검색 분류(종류)와 searchWord = 검색 단어로 쿼리문 완성
-			query += " where " + map.get("searchField") + " " + " like '%" + map.get("searchWord") + "%'";
+			query += " where " + map.get("searchField") + " " 
+					+ " like '%" + map.get("searchWord") + "%'";
 		}
 
 		try {
@@ -64,7 +65,7 @@ public class BoardDAO extends JDBConnect {
 				dto.setContent(rs.getString("content"));
 				dto.setPostdate(rs.getDate("postdate"));
 				dto.setId(rs.getString("id"));
-				dto.setVisitcount(rs.getString("visitcount"));
+				dto.setVisitcount(rs.getInt("visitcount"));
 				bbs.add(dto);
 			}
 			System.out.println("게시물 조회 성공");
@@ -117,7 +118,7 @@ public class BoardDAO extends JDBConnect {
 				dto.setContent(rs.getString("content"));
 				dto.setId(rs.getString("id"));
 				dto.setPostdate(rs.getDate("postdate"));
-				dto.setVisitcount(rs.getString("visitcount"));
+				dto.setVisitcount(rs.getInt("visitcount"));
 				dto.setName(rs.getString("name"));
 			}
 		} catch (Exception e) {

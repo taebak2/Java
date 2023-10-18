@@ -6,8 +6,14 @@ public class BoardDTO {
 	private String content;
 	private String id;
 	private java.sql.Date postdate;	// import 하지 않기 위해서 사용 
-	private String visitcount;
+	private int visitcount;
 	
+	public int getVisitcount() {
+		return visitcount;
+	}
+	public void setVisitcount(int visitcount) {
+		this.visitcount = visitcount;
+	}
 	private String name;
 	
 	// db의 board 테이블에 name이 없음
@@ -46,12 +52,6 @@ public class BoardDTO {
 		this.postdate = postdate;
 	}
 	
-	public String getVisitcount() {
-		return visitcount;
-	}
-	public void setVisitcount(String visitcount) {
-		this.visitcount = visitcount;
-	}
 	
 	public String getName() {
 		return name;
