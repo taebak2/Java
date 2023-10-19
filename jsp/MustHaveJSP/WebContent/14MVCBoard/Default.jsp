@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Default</title>
 </head>
 <body>
 	<h2> 파일 첨부형 비회원제 게시판 </h2>
