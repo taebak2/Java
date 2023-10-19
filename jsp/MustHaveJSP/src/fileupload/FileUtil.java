@@ -27,7 +27,7 @@ public class FileUtil {
 	}
 
 	public static void download(HttpServletRequest request, HttpServletResponse response, String directory,
-			String ofileName, String sfileName) {
+			 String sfileName, String ofileName) {
 		String sDirectory = request.getServletContext().getRealPath(directory);
 			
 		try {
@@ -61,6 +61,15 @@ public class FileUtil {
 			e.printStackTrace();
 			System.out.println("파일을 찾을 수 없습니다.");
 
+		}
+	}
+	
+	public static void deleteFile(HttpServletRequest request, String directory, String filename) {
+		
+		String sDirectory = request.getServletContext().getRealPath(directory);	// 서블릿컨텍스트 쓰는 기준이 뭐임?
+		File file = new File(sDirectory + File.separator + filename);
+		if(file.exists()) {
+			file.delete();
 		}
 	}
 }
