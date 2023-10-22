@@ -1,7 +1,7 @@
 package dao;
 
 import common.MysqlDB;
-import dto.mvctestDTO;
+import dto.mvctestDTO; 
 
 public class mvctestDAO extends MysqlDB {
 
