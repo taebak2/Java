@@ -15,7 +15,7 @@
 			<h1 class="display-3">상품 등록</h1>
 		</div>
 	</div>
-	
+	 
 	<div class="container">
 		<form name="newProduct" action="processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
 			<div class="form-group row">
