@@ -51,25 +51,28 @@ public class BoardController extends HttpServlet {
 		List<BoardDTO> boardlist = new ArrayList<BoardDTO>();
 		
 		int pageNum = 1;
-		int limit = LISTCOUNT;
+		int limit = LISTCOUNT;	// 한 페이지에 표기할 글의 개수 
 		
-		if(request.getParameter("pageNum")!=null) {
+		if(request.getParameter("pageNum")!=null) {	//  페이지 번호가 제공되었는지 여부를 확인
 			pageNum = Integer.parseInt(request.getParameter("pageNum"));
 			
 		String items = request.getParameter("items");
 		String text = request.getParameter("text");
-		
+		// 목록 내에서 필터링 또는 검색을 수행하기 위해 사용
+			
 		int total_record = dao.getListCount(items, text);
 		boardlist = dao.getBoardList(pageNum, limit, items, text);
 		dao.close();
 		// 페이지개수, 한 화면에 표시할 행 개수, 검색 항목, 검색 내용을 boardList에 대입
 		
 		int total_page;
-		if(total_record % limit == 0) {
-			total_page = total_record/limit;
+		// 총 페이지 수	
+		if(total_record % limit == 0) {		 // 게시물의 총 개수를 한 화면에 표시할 게시물 개수로 나눈 값 
+			total_page = total_record/limit; // ex) 총 게시물 20개 한 화면에 5개씩 나타나면? => 총 페이지는 4 페이지 
+							 // total_page = 4  
 			Math.floor(total_page);
 		} else {
-			total_page = total_record/limit;
+			total_page = total_record/limit; // 게시물이 0으로 나눠떨어지지 않으면 1을 추가해야함
 			Math.floor(total_page);
 			total_page = total_page + 1;
 		}
