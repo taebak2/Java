@@ -2,17 +2,17 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"%>
 <%@page import="mvc.model.BoardDAO"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%
-	List boardList = (List)request.getAttribute("boardlist");
-	// 게시판 리스트
-	int total_record = ((Integer)request.getAttribute("total_record")).intValue();
-	// 전체 게시물 개수
-	int pageNum = ((Integer)request.getAttribute("pageNum")).intValue();
-	// 현재 페이지 번호
-	int total_page = ((Integer)request.getAttribute("total_page")).intValue();
-	// 전체 페이지 개수
+	List boardList = (List) request.getAttribute("boardlist");
+// 게시판 리스트
+	int total_record = ((Integer) request.getAttribute("total_record")).intValue();
+// 전체 게시물 개수
+	int pageNum = ((Integer) request.getAttribute("pageNum")).intValue();
+// 현재 페이지 번호
+	int total_page = ((Integer) request.getAttribute("total_page")).intValue();
+// 전체 페이지 개수
 %>
 <!-- 세션 ID를 가져오고 게시판 객체 생성 
 	 전체 게시글 개수 (total_record),전체 페이지(total_page), 
@@ -49,28 +49,63 @@
 			<div class="text-right">
 				<span class="badge badge-success">전체${total_record}건</span>
 			</div>
-			
+
 			<div style="padding-top: 50px">
-			<table class="table table-hover">
+				<table class="table table-hover">
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+						<th>작성일</th>
+						<th>조회</th>
+						<th>글쓴이</th>
+					</tr>
+					<c:forEach items="${boardlist}" var="list">
+						<tr>
+							<td>${list.num}</td>
+							<td><a href="./BoardViewAction.do?num=${list.num}&pageNum=${pageNum}">${list.subject}</a></td>
+							<td>${list.regist_day}</td>
+							<td>${list.hit}</td>
+							<td>${list.name}</td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
+			<div align="center">
+				<c:set var="pageNum" value="<%=pageNum%>" />
+				<c:forEach var="i" begin="1" end="<%=total_page%>">
+					<a href="<c:url value='./BoardListAction.do?pageNum=${i}'/>"> 
+					<c:choose>
+							<c:when test="${pageNum==i}">
+								<font color='red'><b>[${i}]</b></font>
+							</c:when>
+							<c:otherwise>
+								<font color='black'> [${i}]</font>
+							</c:otherwise>
+						</c:choose>
+					</a>
+				</c:forEach>
+			</div>
+			<div align="left">
+				<table>
 				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성일</th>
-					<th>조회</th>
-					<th>글쓴이</th>
-				</tr>
-			<c:forEach items="${boardlist}" var="list">
-			<tr>
-				<td>${list.num}</td>
-				<td><a href="./BoardViewAction.do?num=${list.num}&pageNum=${pageNum}">${list.subject}</a></td>
-				<td>${list.regist_day}</td>
-				<td>${list.hit}</td>
-				<td>${list.name}</td>
+				<td width="100%" align="left">&nbsp;&nbsp;
+				<select name="items" class="txt">
+					<option value="subject">제목에서</option>
+					<option value="content">본문에서</option>
+					<option value="name">글쓴이에서</option>
+				</select>
+				<input name="text" type="text">
+				<input type="submit" id="btnAdd" class="btn btn-primary" value="검색">
+				</td>
+				
+				<td width="100%" align="right">
+				<a href="#" onclick="checkForm(); return false;"
+				class="btn btn-primary">글쓰기</a>
+				</td>
 			</tr>
-			</c:forEach>
-			</table>
-		</div>
-	</form>
+		</table>
+			</div>
+		</form>
 	</div>
 </body>
 </html>
