@@ -19,7 +19,7 @@
 <script>
 	$(function(){
 		function getClock(){
-			/* var date = new Date();
+			 var date = new Date();
 			var hour = date.getHours();
 			var minute = date.getMinutes();
 			var second = date.getSeconds();
@@ -33,8 +33,7 @@
 				hour = hour - 12;
 			}
 			var time = ampm + " " + hour + ":" + minute + ":" + second;
-			$("#clock").text(time);  */
-			
+			$("#clock").text(time); 
 		}
 		getClock();
 		setInterval(getClock,1000);
