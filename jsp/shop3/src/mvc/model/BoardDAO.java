@@ -18,6 +18,7 @@ public class BoardDAO extends DBConnection {
 			sql = "select count(*) from board";
 		else
 			sql = "select count(*) from board where " + items + " like '%" + text + "%'";
+
 		try {
 			psmt = con.prepareStatement(sql);
 			rs = psmt.executeQuery();
@@ -26,7 +27,10 @@ public class BoardDAO extends DBConnection {
 				count = rs.getInt(1);
 			}
 
+			System.out.println(count);
+			System.out.println("getListCount 성공");
 		} catch (Exception e) {
+			System.out.println(count);
 			System.out.println("getListCount 오류 : " + e);
 
 		}
@@ -34,34 +38,31 @@ public class BoardDAO extends DBConnection {
 		return count;
 	}
 
-	public ArrayList<BoardDTO>	// board 테이블에 데이터 가져오기  
-		getBoardList(int page, int limit, String items, String text) {
-		int total_record = getListCount(items, text);	// 전체 게시물 개수 
-		int start = (page - 1) * limit;	
-		// 해당 페이지 게시물의 시작 지점 
-		// 페이지 번호를 기반으로 시작 위치를 계산하여 
-		// 해당 페이지에서 표시할 데이터 범위를 정함
+	public ArrayList<BoardDTO> // board 테이블에 데이터 가져오기
+			getBoardList(int page, int limit, String items, String text) {
+		int total_record = getListCount(items, text); // 전체 게시물 개수
+		int start = (page - 1) * limit; // 해당 페이지 게시물의 시작 지점
 		int index = start + 1;
-		// 데이터를 반복적으로 검색하기 위한 인덱스 변수
+
 		String sql;
 
 		if (items == null && text == null) {
-			sql = "select * from board order by num desc";	// 조건이 없으면 전체를 반환 
+			sql = "select * from board order by num desc"; // 조건이 없으면 전체
 		} else {
-			sql = "select * from board where " + items + "like '%" + text + "%' order by num desc";
+			sql = "select * from board where " + items + " like '%" + text + "%' order by num desc";
 		}
 		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
 
 		try {
-			
+
 			psmt = con.prepareStatement(sql);
 			rs = psmt.executeQuery();
 
-			while(rs.absolute(index)) {	// absolute 메서드를 이용해 특정 위치로 이동 
+			while (rs.absolute(index)) { // index행으로 이동
 				BoardDTO board = new BoardDTO();
 				board.setNum(rs.getInt("num"));
 				board.setId(rs.getString("id"));
-				
+
 				board.setName(rs.getString("name"));
 				board.setSubject(rs.getString("subject"));
 				board.setContent(rs.getString("content"));
@@ -69,23 +70,100 @@ public class BoardDAO extends DBConnection {
 				board.setHit(rs.getInt("hit"));
 				board.setIp(rs.getString("ip"));
 				list.add(board);
-				
-				if((index) < (start + limit) && index <= total_record) { // 인덱스가 해당 페이지의 시작 위치와 페이지당 표시할 항목 수 범위 내에 있으며
-											 // 전체 레코드수보다 작거나 같은지 확인
-											 // 즉, 현재 페이지 범위 내에 레코드가 남아 있는지를 확인
+
+				if ((index) < (start + limit) && index <= total_record) {
 					index++;
 				} else {
 					break;
-				// 만약 현재 인덱스가 페이지 범위 내에 없거나 전체 레코드를 모두 읽었을 경우, 
-				// 종료하고 데이터 검색 작업을 마침
 				}
 			}
 			return list;
-			// 해당 페이지에 표시해야 하는 데이터 목록 반환
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("연결 오류 ");
 		}
 		return null;
 	}
+
+	public void insertWrite(BoardDTO dto) {
+
+		int result = 0;
+		String query = "insert into board(id,name,subject,content,regist_day,ip,hit) values(?,?,?,?,?,?,0)";
+		try {
+			psmt = con.prepareStatement(query);
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getSubject());
+			psmt.setString(4, dto.getContent());
+			psmt.setString(5, dto.getRegist_day());
+			psmt.setString(6, dto.getIp());
+			psmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("게시물 글쓰기 오류");
+		}
+	}
+
+	public BoardDTO getBoardByNum(int num) {
+		String sql = " select * from board where num = ? ";
+		BoardDTO dto = null;
+
+		// 게시판 조회수 증가
+		updateHit(num);
+		try {
+			psmt = con.prepareStatement(sql);
+			psmt.setInt(1, num);
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				dto = new BoardDTO();
+				dto.setNum(rs.getInt("num"));
+				dto.setId(rs.getString("id"));
+				dto.setName(rs.getString("name"));
+				dto.setSubject(rs.getString("subject"));
+				dto.setContent(rs.getString("content"));
+				dto.setRegist_day(rs.getString("regist_day"));
+				dto.setHit(rs.getInt("hit"));
+				dto.setIp(rs.getString("ip"));
+				System.out.println("조회 성공");
+			}
+			return dto;
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("조회 실패");
+		}
+		return null;
+	}
+
+	public void updateHit(int num) {
+		try {
+			String sql = "update board set hit = hit+1 where num=?";
+			// DB에 증가된 횟수를 업데이트 시킴
+			psmt = con.prepareStatement(sql);
+			psmt.setInt(1, num);
+			psmt.executeUpdate();
+			System.out.println("게시판 조회횟수 업데이트 성공");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("게시판 조회횟수 업데이트 에러");
+		}
+	}
+
+	public void updateBoard(BoardDTO dto) {
+		int result = 0;
+		try {
+			String sql = "update board set content=?, subject=? where num=?";
+			psmt = con.prepareStatement(sql);
+			psmt.setString(1, dto.getSubject());
+			psmt.setString(2, dto.getContent());
+			psmt.setInt(3, dto.getNum());
+			result = psmt.executeUpdate();
+			System.out.println("수정 완료");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("수정 실패");
+		}
+	}
+
 }

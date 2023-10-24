@@ -15,7 +15,7 @@ public class DBConnection {
 	public DBConnection() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/mvcboard?useUnicdoe=true&characterEncoding=utf8&SSL=false";
+			String url = "jdbc:mysql://localhost:3306/mvcboard?useUnicdoe=true&characterEncoding=utf8&useSSL=false";
 			String id = "manager";
 			String pw = "1234";
 
