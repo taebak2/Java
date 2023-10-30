@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.jsp.JspWriter; // JspWriter는 JSP 페이지에서 출력을 생성하는 데 사용되는 클래스
 
-public class JSFunction {
+public class JSFunction { 
 
 	public static void alertLocation(String msg, String url, JspWriter out) { // out: JspWriter 객체로, 메서드에서 생성된 JavaScript 코드를 JSP 페이지에 출력하는 데 사용
 		try {
