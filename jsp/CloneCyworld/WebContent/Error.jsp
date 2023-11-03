@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>에러 발생!</h1>
-	<button onclick="location.href='index.jsp'">
+	<button onclick="location.href='index.jsp';">
 		인덱스 페이지로 이동
 	</button>
 </body>

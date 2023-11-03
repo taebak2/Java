@@ -11,8 +11,8 @@ public class memberDAO extends DBConnector {
 	}
 
 	public int CreateMember(member cyMember) throws ClassNotFoundException {
-		String INSERT_MEMBER_SQL = "insert into Member (id, password, email, phone, isAdmin) values "
-				+ "(?, ?, ?, ?, ?)";
+		String INSERT_MEMBER_SQL = "insert into Member (id, password, email, phone, isAdmin, imgName) values "
+				+ "(?, ?, ?, ?, ?,?)";
 
 		int result = 0;
 
@@ -23,6 +23,7 @@ public class memberDAO extends DBConnector {
 			psmt.setString(3, cyMember.getEmail());
 			psmt.setString(4, cyMember.getPhone());
 			psmt.setString(5, cyMember.getIsAdmin());
+			psmt.setString(6, cyMember.getImgName());
 
 			result = psmt.executeUpdate();
 
@@ -34,8 +35,8 @@ public class memberDAO extends DBConnector {
 	}
 
 	public int CheckDuplicateId(String id) throws SQLException {
+		String GET_MEMBER_SQL = "select id from member where id = ?";
 
-		String GET_MEMBER_SQL = "select id from member where id = ? ";
 		int result = 0;
 
 		try {
@@ -43,29 +44,60 @@ public class memberDAO extends DBConnector {
 			psmt.setString(1, id);
 
 			rs = psmt.executeQuery();
+
 			if (rs.next()) {
 				result = 1;
 			} else {
 				result = 0;
 			}
+		} catch (Exception e) {
 
+		}
+
+		return result;
+	}
+
+	public int CyworldLogin(String id, String pw) {
+		String CYWORLD_LOGIN_QUERY = "select password from member where id = ?";
+
+		int result = 0;
+
+		try {
+			psmt = con.prepareStatement(CYWORLD_LOGIN_QUERY);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				if (rs.getString("password").equals(pw)) {
+					result = 1;
+				} else {
+					result = 0;
+				}
+			} else {
+				result = -1;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		return result;
 	}
-  
-	public member loginCheck(String id, String pw) {
-		String sql = "select * from member where id=? and password=?";
+
+	public member getMember(String id) {
 		member member = new member();
+		String GET_MEMBER_SQL = "select * from member where id = ?";
 		try {
-			psmt = con.prepareStatement(sql);
+			psmt = con.prepareStatement(GET_MEMBER_SQL);
 			psmt.setString(1, id);
-			psmt.setString(2, pw);
 			rs = psmt.executeQuery();
+			
 			if (rs.next()) {
 				member.setId(rs.getString("id"));
 				member.setPassword(rs.getString("password"));
+				member.setPhone(rs.getString("phone"));
+				member.setEmail(rs.getString("email"));
+				member.setIsAdmin(rs.getString("isAdmin"));
+				member.setImgName(rs.getString("imgName"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

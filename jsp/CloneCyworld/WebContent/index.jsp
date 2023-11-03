@@ -13,8 +13,8 @@
 		<img class="logo" alt="logo" src="./resources/img/cyworld.png" />
 		<h3>클론코딩 - 싸이월드에 오신것을 환영합니다 !</h3>
 		<div>
-			<a href="#" class="point">로그인</a>
-			<a href="#">회원가입</a>
+			<a href="login.jsp" class="point">로그인</a>
+			<a href="Register.jsp">회원가입</a>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>
