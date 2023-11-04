@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="./resources/css/index.css" />
 <link rel="stylesheet" href="./resources/css/home.css" />
 <script type="text/javascript" src="./resources/js/home.js"></script>
-<title>Insert title here</title>
+<title>guestbook</title>
 <%
 
 	String owner_id = request.getParameter("owner_id");
