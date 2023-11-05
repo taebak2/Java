@@ -83,7 +83,7 @@ public class memberDAO extends DBConnector {
 		return result;
 	}
 
-	public member getMember(String id) {
+	public member getMember(String id) { // 회원 프로필을 조회하는 데 사용
 		member member = new member();
 		String GET_MEMBER_SQL = "select * from member where id = ?";
 		try {
