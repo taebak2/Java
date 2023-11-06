@@ -36,18 +36,19 @@ public class guestbookDAO extends DBConnector{
 	// 게시물 가져오기
 	public List<guestbook> selectList(String id){
 		List<guestbook> guest = new ArrayList<guestbook>();
-		String LIST_GUESTBOOK_SQL = "select * from guestbook where owner_id=? order by no desc";
+		String LIST_GUESTBOOK_SQL = "select * from guestbook join member on member.id = guestbook.id where owner_id = ?";
 		try {
 			psmt = con.prepareStatement(LIST_GUESTBOOK_SQL);
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();
 			while(rs.next()) {
-			guestbook gbook = new guestbook();
-			gbook.setId(rs.getString("id"));
-			gbook.setOwner_id(rs.getString("owner_id"));
-			gbook.setCreated(rs.getString("created"));
-			gbook.setContent(rs.getString("content"));
-			guest.add(gbook);
+				guestbook gbook = new guestbook();
+				gbook.setId(rs.getString("id"));
+				gbook.setOwner_id(rs.getString("owner_id"));
+				gbook.setCreated(rs.getString("created"));
+				gbook.setContent(rs.getString("content"));
+				gbook.setImgName(rs.getString("imgName"));
+				guest.add(gbook);
 			}
 			System.out.println("게시물 가져오기 성공");
 		} catch (Exception e) {

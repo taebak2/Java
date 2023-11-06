@@ -22,7 +22,7 @@ public class LogoutServlet extends HttpServlet {
 	private void processRequest(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		HttpSession session = req.getSession();
 		if(session != null) {
-			session.invalidate();
+			session.invalidate();	// 세션 삭제
 		}
 		
 		resp.sendRedirect("login.jsp");

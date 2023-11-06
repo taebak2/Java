@@ -31,7 +31,7 @@
 					<label>비밀번호 확인</label> <input class="w-60" type="password"
 						name="pwcheck" maxlength="8" />
 				</div>
-				<p></p>
+				
 				<div class="email-wrapper flex-between">
 					<label>이메일</label>
 					<div class="w-60 flex-between">

@@ -2,8 +2,16 @@ package model;
 
 public class guestbook {
 
-	private String id, owner_id, created, content;
-	
+	private String id, owner_id, created, content, imgName;
+
+	public String getImgName() {
+		return imgName;
+	}
+
+	public void setImgName(String imgName) {
+		this.imgName = imgName;
+	}
+
 	public String getId() {
 		return id;
 	}

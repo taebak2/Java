@@ -24,12 +24,14 @@ public class GuestBookServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		String content = request.getParameter("content");
 		String owner_id = request.getParameter("owner_id");
+		String imgName = request.getParameter("imgName");
 		
 		guestbook gbook = new guestbook();
 		
 		gbook.setId(id);
 		gbook.setContent(content);
 		gbook.setOwner_id(owner_id);
+		gbook.setImgName(imgName);
 		
 		guestbookDAO dao = new guestbookDAO();
 		int result = 0;

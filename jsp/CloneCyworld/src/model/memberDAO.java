@@ -58,7 +58,7 @@ public class memberDAO extends DBConnector {
 	}
 
 	public int CyworldLogin(String id, String pw) {
-		String CYWORLD_LOGIN_QUERY = "select password from member where id = ?"; // id가 ? 인 회원의 pw를 가져옴
+		String CYWORLD_LOGIN_QUERY = "select password from member where id = ?";
 
 		int result = 0;
 
@@ -83,7 +83,7 @@ public class memberDAO extends DBConnector {
 		return result;
 	}
 
-	public member getMember(String id) { // 회원 프로필을 조회하는 데 사용
+	public member getMember(String id) {
 		member member = new member();
 		String GET_MEMBER_SQL = "select * from member where id = ?";
 		try {

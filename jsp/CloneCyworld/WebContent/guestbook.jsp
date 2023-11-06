@@ -1,4 +1,3 @@
-<%@page import="javax.websocket.Decoder.Text"%>
 <%@page import="model.guestbook"%>
 <%@page import="java.util.List"%>
 <%@page import="model.guestbookDAO"%>
@@ -15,17 +14,24 @@
 <link rel="stylesheet" href="./resources/css/index.css" />
 <link rel="stylesheet" href="./resources/css/home.css" />
 <script type="text/javascript" src="./resources/js/home.js"></script>
-<title>guestbook</title>
+<title>Insert title here</title>
 <%
-
 	String owner_id = request.getParameter("owner_id");
-	guestbookDAO dao2 = new guestbookDAO();
-	List<guestbook> guest = dao2.selectList(owner_id);
-	dao2.close();
+	memberDAO cyMemberDAO = new memberDAO();
+	member user = cyMemberDAO.getMember(owner_id);
+	cyMemberDAO.close();
+	guestbookDAO guestbook = new guestbookDAO();
+	List<guestbook> guestbooklist = guestbook.selectList(owner_id);
+	guestbook.close();
 %>
 
 </head>
 <body>
+	<c:if test="${loginUserId ne param.id}">
+		<form action="GuestBookServlet" method="post">
+		<input type="hidden" name="owner_id" value=<%=owner_id%>/>
+		</form>
+	</c:if>
 	<div class="container">
 		<div class="right-box">
 			<form action="LogoutServlet" method="post">
@@ -65,15 +71,16 @@
 				
 				<button class="btn btn-lg btn-success btn-block" 
 					type="submit">글작성</button>
+			<div class="gesipan">
+			<c:forEach var="text" items="<%=guestbooklist%>">
+				<div>${text.id}</div>
+				<div>${text.created}</div>
+				<div>${text.content}</div>
+				<div><img class="profile" alt="profile" src="./resources/img/${text.imgName}"></div>
+			</c:forEach>
+			</div>
 			</form>
 			</div>
-			</div>
-			<div class="gesipan">
-			<c:forEach var="text" items="<%=guest%>">
-				<div>${text.id }</div>
-				<div>${text.created }</div>
-				<div>${text.content }</div>
-			</c:forEach>
 			</div>
 		</div>
 </body>

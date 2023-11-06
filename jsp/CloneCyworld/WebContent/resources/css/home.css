@@ -2,16 +2,17 @@
 
 .container {
 	display: flex;
-	width: 1200px;
-	height: 800px;
+	width: 1400px;
+	height: 733px;
+	background-color: lightblue;
 }
 
 .container .left-box {
-	width: 30%;
+	width: 37%;
 }
 
 .container .right-box {
-	width: 70%;
+	width: 100%;
 }
 
 .profile {
@@ -35,7 +36,7 @@
 .right-box .right-box-content {
 	display: flex;
 	justify-content: space-between;
-	width: 90%;
+	width: 75%;
 }
 
 .right-box-content .menu {
@@ -44,6 +45,7 @@
 	width: 100px;
 	padding: 5px;
 }
+
 
 .menu-wrapper+.menu-wrapper {
 	border-top: 1px solid black;
@@ -63,8 +65,8 @@
 }
 
 .big-img {
-	width: 92%;
-	height: 450px;
+	width: 70%;
+	height: 471px;
 	border: 1px solid black;
 	border-radius: 3px;
 }
@@ -73,4 +75,26 @@
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
+}
+
+.menu-box {
+	margin-top: 259px;
+	margin-left: -176px;
+}
+
+.menu-box .menu {
+	border: 1px solid black;
+	border-radius:10px;
+	width: 106px;
+	height: 40px;
+	padding: 10px;
+	margin-bottom: 3px;
+	background-color: white;
+}
+
+.menu-top{
+	width:120px;
+	text-align:center;
+	padding: 5px;
+	border:1px solid black;
 }

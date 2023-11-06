@@ -17,7 +17,7 @@ public class RegisterServlet extends HttpServlet {
 	
 	private memberDAO cymemberDAO;
 	
-	public void init() {
+	public void init() { // 서블릿 시작할 때 init()
 		cymemberDAO = new memberDAO();
 	}
 	
