@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="./resources/css/layout.css" />
 <link rel="stylesheet" href="./resources/css/index.css" />
 <link rel="stylesheet" href="./resources/css/home.css" />
-<link rel="stylesheet" href="./resources/css/guestbook.css" />
 <script type="text/javascript" src="./resources/js/home.js"></script>
 <title>Insert title here</title>
 <%
@@ -35,10 +34,6 @@
 					<p>BGM</p>
 				</div>
 				<div class="right-box-content">
-					<div class="menu-top" style="display: flex">
-						<div class="menu">일기</div>
-						<div class="menu">사진</div>
-					</div>
 					<div style="border: 1px solid black">
 						<div class="menu-wrapper" style="display: flex">
 							<div class="menu">투데이</div>
