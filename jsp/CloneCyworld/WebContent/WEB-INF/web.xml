@@ -52,6 +52,14 @@
 		<servlet-name>GuestBookServlet</servlet-name>
 		<url-pattern>/GuestBookServlet</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>GuestBookReplyServlet</servlet-name>
+		<servlet-class>controller.GuestBookReplyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GuestBookReplyServlet</servlet-name>
+		<url-pattern>/GuestBookReplyServlet</url-pattern>
+	</servlet-mapping>
 	<!-- <filter>
 		<filter-name>AuthFilter</filter-name>
 		<filter-class>filter.AuthFilter</filter-class>
