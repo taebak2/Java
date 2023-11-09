@@ -9,7 +9,7 @@
 <body>
 	<input type="file" name="photo" onchange="setThumbnail(event)" />
 	<div id="photo-container"></div>
-	
+	 
 	<script>
 		function setThumbnail(event) {
 			var reader = new FileReader();
