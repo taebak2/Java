@@ -12,11 +12,11 @@ public class VectorExample {
 		
 		v.remove(1);
 		
-		// º¤ÅÍ¿¡ ÀÖ´Â Æ÷ÀÎÆ® °´Ã¼ Ãâ·Â
+		// ë²¡í„°ì— ìˆëŠ” í¬ì¸íŠ¸ ê°ì²´ ì¶œë ¥
 		
 		
-		for (Point point : v) {
-			System.out.println(point);
+		 for (Point point : v) {
+			System.out.println(point); 
 		}
 		
 		for (int i = 0; i < v.size(); i++) {
