@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 public class logout extends HttpServlet {
        
-    public logout() {
+    public logout() { 
         super();
     }
 
