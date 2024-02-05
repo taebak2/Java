@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 public class logout extends HttpServlet {
        
     public logout() { 
-        super();
+        super(); 
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
