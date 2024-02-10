@@ -1,11 +1,11 @@
 package sec02;
 
 public interface RemoteControl {
-	String COMPANY="»ï¼º"; 
+	String COMPANY="ì‚¼ì„±"; 
 	int COST=5000;
-	// ÀÎÅÍÆäÀÌ½º ÇÊµå´Â »ó¼ö ÇÊµå¸¦ »ç¿ëÇØ¾ßÇÔ
-	// ÀÎÅÍÆäÀÌ½º ÇÊµå´Â ´ë¹®ÀÚ »ç¿ëÇØ¾ßÇÑ´Ù.
+	// ì¸í„°í˜ì´ìŠ¤ í•„ë“œëŠ” ìƒìˆ˜ í•„ë“œë¥¼ ì‚¬ìš©í•´ì•¼í•¨
+	// ì¸í„°í˜ì´ìŠ¤ í•„ë“œëŠ” ëŒ€ë¬¸ì ì‚¬ìš©í•´ì•¼í•œë‹¤.
 	
 	public void turnOn();
-	public void turnOff();
+	public void turnOff(); 
 }
