@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections; 
 
-public class Ranking extends JFrame implements ActionListener {
+public class Ranking extends JFrame implements ActionListener { 
 
 	private final int X_RANK = 150;
 	private final int X_NAME = 250;
